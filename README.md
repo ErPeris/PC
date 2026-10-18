@@ -1,5 +1,7 @@
 # Driver per 3 servomotori: progetto KiCad, due varianti
 
+> Nel repository c'è anche la **scheda di test con Arduino Nano** (progetto 3): è nella cartella [`Scheda_Test_Arduino/`](Scheda_Test_Arduino/README.md), che ha il suo README.
+
 Il circuito prende l'alimentazione da una batteria LiPo 2S (7.4 V), la abbassa a 5 V per i servo e porta i tre segnali PWM del microcontrollore da 3.3 V a livello 5 V con un LM324. Tutti i componenti sono a foro passante (THT).
 
 | Cartella | Regolatore | File |
@@ -43,6 +45,8 @@ Nella cartella `produzione/` ci sono:
 | `Gerber_Servo_Driver_A_LDO.zip` | Gerber e forature della variante A, da caricare così com'è sul sito del produttore |
 | `Gerber_Servo_Driver_B_Buck.zip` | Gerber e forature della variante B |
 | `Progetto_KiCad_Driver_3_Servo.zip` | progetto KiCad completo delle due varianti (schemi, PCB, regole, PDF, Gerber, README) |
+| `Gerber_Scheda_Test_Arduino.zip` | Gerber e forature della scheda di test con Arduino Nano |
+| `Progetto_KiCad_Scheda_Test_Arduino.zip` | progetto KiCad completo della scheda di test, con lo sketch di prova |
 
 Ogni zip Gerber contiene:
 - rame lato componenti e lato saldature (`.gtl`, `.gbl`);

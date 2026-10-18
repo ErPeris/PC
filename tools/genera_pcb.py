@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Genera il PCB (2 strati, foro passante) delle due varianti e lo sbroglia con Freerouting.
+"""Genera il PCB (2 strati, foro passante) delle due varianti del driver servo e lo sbroglia
+con Freerouting. Le funzioni sono usate anche da genera_scheda_arduino.py.
 
 Uso:  FREEROUTING_JAR=freerouting-2.4.1-executable.jar JAVA=/percorso/java-25 \\
       python3 tools/genera_pcb.py
@@ -24,9 +25,7 @@ FPDIR = os.environ.get("KICAD_FOOTPRINT_DIR", "/usr/share/kicad/footprints")
 FREEROUTING = os.environ.get("FREEROUTING_JAR", "freerouting.jar")
 JAVA = os.environ.get("JAVA", "java")
 
-W, H = 80.0, 60.0      # dimensioni della scheda (mm)
 OX, OY = 100.0, 100.0  # posizione della scheda nel foglio
-POWER_NETS = ["GND", "+BATT", "+5V", "Net-(D1-K)"]
 
 # posizione del pad 1 (x, y, rotazione) rispetto all'angolo in alto a sinistra della scheda
 COMMON = {
@@ -77,7 +76,7 @@ REFS = {
 }
 
 
-def silk(variant):
+def silk_servo(variant):
     """Scritte sulla serigrafia: (testo, x, y, dimensione)."""
     yb = PLACE[variant]["J1"][1]
     out = [("+", 12, yb - 4, 1.2), ("-", 10, yb - 4, 1.2), ("BATT 7.4V (J1)", 11, yb + 4, 1.0),
@@ -115,17 +114,17 @@ def read_netlist(sch):
     return comps, nets
 
 
-def setup_rules(board):
+def setup_rules(board, clearance):
     ds = board.GetDesignSettings()
     ds.SetCopperLayerCount(2)
     ns = ds.m_NetSettings
     dflt = ns.m_DefaultNetClass
-    dflt.SetClearance(pcbnew.FromMM(0.3))
+    dflt.SetClearance(pcbnew.FromMM(clearance))
     dflt.SetTrackWidth(pcbnew.FromMM(0.4))
     dflt.SetViaDiameter(pcbnew.FromMM(0.8))
     dflt.SetViaDrill(pcbnew.FromMM(0.4))
     pwr = pcbnew.NETCLASS("Power")
-    pwr.SetClearance(pcbnew.FromMM(0.3))
+    pwr.SetClearance(pcbnew.FromMM(clearance))
     pwr.SetTrackWidth(pcbnew.FromMM(0.8))
     pwr.SetViaDiameter(pcbnew.FromMM(1.0))
     pwr.SetViaDrill(pcbnew.FromMM(0.5))
@@ -133,21 +132,29 @@ def setup_rules(board):
     return pwr
 
 
-def build_board(variant, sch, pcb_path):
+def servo_project(variant, folder, name):
+    """Configurazione di una scheda per make_pcb()."""
+    return {"folder": folder, "name": name, "w": 80.0, "h": 60.0,
+            "power_nets": ["GND", "+BATT", "+5V", "Net-(D1-K)"],
+            "place": PLACE[variant], "routes": ROUTES[variant], "refs": REFS[variant],
+            "silk": silk_servo(variant)}
+
+
+def build_board(cfg, sch):
     comps, nets = read_netlist(sch)
     board = pcbnew.BOARD()
-    pwr = setup_rules(board)
+    pwr = setup_rules(board, cfg.get("clearance", 0.3))
 
     netitems = {}
     for name in sorted(set(nets.values())):
         ni = pcbnew.NETINFO_ITEM(board, name)
         board.Add(ni)
         netitems[name] = ni
-        if name in POWER_NETS:
+        if name in cfg["power_nets"]:
             ni.SetNetClass(pwr)
 
     sheetfile = os.path.basename(sch)
-    for ref, (x, y, rot) in PLACE[variant].items():
+    for ref, (x, y, rot) in cfg["place"].items():
         c = comps.pop(ref)
         lib, name = c["footprint"].split(":")
         fp = pcbnew.FootprintLoad(os.path.join(FPDIR, lib + ".pretty"), name)
@@ -165,7 +172,7 @@ def build_board(variant, sch, pcb_path):
                 pad.SetNet(netitems[net])
         # valore sullo strato di fabbricazione, non sulla serigrafia
         fp.Value().SetLayer(pcbnew.F_Fab)
-        ref_pos = REFS[variant].get(ref, "default")
+        ref_pos = cfg["refs"].get(ref, "default")
         if ref_pos is None:
             fp.Reference().SetVisible(False)
         elif ref_pos != "default":
@@ -177,6 +184,7 @@ def build_board(variant, sch, pcb_path):
     assert not comps, "componenti senza posizione: %s" % sorted(comps)
 
     # contorno della scheda
+    W, H = cfg["w"], cfg["h"]
     corners = [(0, 0), (W, 0), (W, H), (0, H)]
     for a, b in zip(corners, corners[1:] + corners[:1]):
         seg = pcbnew.PCB_SHAPE(board)
@@ -187,7 +195,7 @@ def build_board(variant, sch, pcb_path):
         seg.SetWidth(pcbnew.FromMM(0.1))
         board.Add(seg)
 
-    for net, layer, width, pts in ROUTES[variant]:
+    for net, layer, width, pts in cfg["routes"]:
         for p0, p1 in zip(pts, pts[1:]):
             t = pcbnew.PCB_TRACK(board)
             t.SetStart(pt(*p0))
@@ -198,7 +206,7 @@ def build_board(variant, sch, pcb_path):
             t.SetLocked(True)  # Freerouting non le sposta
             board.Add(t)
 
-    for txt, x, y, size in silk(variant):
+    for txt, x, y, size in cfg["silk"]:
         t = pcbnew.PCB_TEXT(board)
         t.SetText(txt)
         t.SetPosition(pt(x, y))
@@ -209,10 +217,14 @@ def build_board(variant, sch, pcb_path):
     return board, netitems
 
 
-def autoroute(board, workdir):
+def autoroute(pcb, workdir):
     dsn = os.path.join(workdir, "board.dsn")
     ses = os.path.join(workdir, "board.ses")
-    assert pcbnew.ExportSpecctraDSN(board, dsn)
+    # esportazione in un processo nuovo: così KiCad carica il .kicad_pro aggiornato
+    # e assegna le net alle classi (larghezza delle piste di alimentazione)
+    subprocess.run([sys.executable, "-c", "import pcbnew, sys; "
+                    "sys.exit(not pcbnew.ExportSpecctraDSN(pcbnew.LoadBoard(sys.argv[1]), sys.argv[2]))",
+                    pcb, dsn], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     subprocess.run([JAVA, "-jar", FREEROUTING, "-de", dsn, "-do", ses, "-mp", "100",
                     "--gui.enabled=false", "--usage_and_diagnostic_data.disable_analytics=true"],
                    check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
@@ -260,7 +272,7 @@ def import_ses(board, netitems, ses):
     return ntrack, nvia
 
 
-def add_gnd_zones(board, gnd):
+def add_gnd_zones(board, gnd, W, H):
     for layer in (pcbnew.F_Cu, pcbnew.B_Cu):
         z = pcbnew.ZONE(board)
         z.SetLayer(layer)
@@ -287,11 +299,11 @@ DRU = """(version 1)
 """
 
 
-def project_netclasses(pro_path):
+def project_netclasses(pro_path, power_nets, clearance):
     """Scrive le classi di net nel .kicad_pro (KiCad le legge da lì)."""
     with open(pro_path) as f:
         pro = json.load(f)
-    base = {"bus_width": 12, "clearance": 0.3, "diff_pair_gap": 0.25, "diff_pair_via_gap": 0.25,
+    base = {"bus_width": 12, "clearance": clearance, "diff_pair_gap": 0.25, "diff_pair_via_gap": 0.25,
             "diff_pair_width": 0.2, "line_style": 0, "microvia_diameter": 0.3, "microvia_drill": 0.1,
             "pcb_color": "rgba(0, 0, 0, 0.000)", "schematic_color": "rgba(0, 0, 0, 0.000)",
             "wire_width": 6}
@@ -301,42 +313,47 @@ def project_netclasses(pro_path):
         "meta": {"version": 3},
         "net_colors": None,
         "netclass_assignments": None,
-        "netclass_patterns": [{"netclass": "Power", "pattern": n} for n in POWER_NETS],
+        "netclass_patterns": [{"netclass": "Power", "pattern": n} for n in power_nets],
     }
     with open(pro_path, "w") as f:
         json.dump(pro, f, indent=2)
         f.write("\n")
 
 
+def make_pcb(cfg):
+    """Crea, sbroglia e verifica il PCB descritto da cfg (vedi servo_project)."""
+    d = os.path.join(ROOT, cfg["folder"])
+    sch = os.path.join(d, cfg["name"] + ".kicad_sch")
+    pcb = os.path.join(d, cfg["name"] + ".kicad_pcb")
+    board, _ = build_board(cfg, sch)
+    board.SetFileName(pcb)
+    pcbnew.SaveBoard(pcb, board)
+    project_netclasses(os.path.join(d, cfg["name"] + ".kicad_pro"), cfg["power_nets"], cfg.get("clearance", 0.3))
+    with open(os.path.join(d, cfg["name"] + ".kicad_dru"), "w") as f:
+        f.write(DRU)
+
+    # ricarico la scheda: così valgono le classi di net del progetto e il
+    # riempimento delle zone funziona
+    board = pcbnew.LoadBoard(pcb)
+    board.BuildConnectivity()
+    netitems = {n.GetNetname(): n for n in board.GetNetsByName().values()}
+    add_gnd_zones(board, netitems["GND"], cfg["w"], cfg["h"])  # per Freerouting sono piani di massa
+    pcbnew.SaveBoard(pcb, board)
+    with tempfile.TemporaryDirectory() as tmp:
+        ses = autoroute(pcb, tmp)
+        ntrack, nvia = import_ses(board, netitems, ses)
+    pcbnew.ZONE_FILLER(board).Fill(board.Zones())
+    pcbnew.SaveBoard(pcb, board)
+
+    report = os.path.join(tempfile.gettempdir(), cfg["name"] + "-drc.txt")
+    pcbnew.WriteDRCReport(pcbnew.LoadBoard(pcb), report, pcbnew.EDA_UNITS_MILLIMETRES, True)
+    summary = [l.strip("* \n") for l in open(report) if l.startswith("** Found")]
+    print("%s: %d segmenti e %d via dall'autorouter; DRC: %s" % (cfg["folder"], ntrack, nvia, ", ".join(summary)))
+
+
 def main():
-    for variant, folder, name in [("A", "Variante_A_LDO", "Servo_Driver_A_LDO"),
-                                  ("B", "Variante_B_Buck", "Servo_Driver_B_Buck")]:
-        d = os.path.join(ROOT, folder)
-        sch = os.path.join(d, name + ".kicad_sch")
-        pcb = os.path.join(d, name + ".kicad_pcb")
-        board, _ = build_board(variant, sch, pcb)
-        board.SetFileName(pcb)
-        pcbnew.SaveBoard(pcb, board)
-        project_netclasses(os.path.join(d, name + ".kicad_pro"))
-        with open(os.path.join(d, name + ".kicad_dru"), "w") as f:
-            f.write(DRU)
-
-        # ricarico la scheda: così valgono le classi di net del progetto e il
-        # riempimento delle zone funziona
-        board = pcbnew.LoadBoard(pcb)
-        board.BuildConnectivity()
-        netitems = {n.GetNetname(): n for n in board.GetNetsByName().values()}
-        add_gnd_zones(board, netitems["GND"])  # esportate a Freerouting come piani di massa
-        with tempfile.TemporaryDirectory() as tmp:
-            ses = autoroute(board, tmp)
-            ntrack, nvia = import_ses(board, netitems, ses)
-        pcbnew.ZONE_FILLER(board).Fill(board.Zones())
-        pcbnew.SaveBoard(pcb, board)
-
-        report = os.path.join(tempfile.gettempdir(), name + "-drc.txt")
-        pcbnew.WriteDRCReport(pcbnew.LoadBoard(pcb), report, pcbnew.EDA_UNITS_MILLIMETRES, True)
-        summary = [l.strip("* \n") for l in open(report) if l.startswith("** Found")]
-        print("%s: %d segmenti e %d via dall'autorouter; DRC: %s" % (folder, ntrack, nvia, ", ".join(summary)))
+    make_pcb(servo_project("A", "Variante_A_LDO", "Servo_Driver_A_LDO"))
+    make_pcb(servo_project("B", "Variante_B_Buck", "Servo_Driver_B_Buck"))
 
 
 if __name__ == "__main__":
