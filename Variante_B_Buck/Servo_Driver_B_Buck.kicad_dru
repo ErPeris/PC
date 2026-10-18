@@ -1,0 +1,5 @@
+(version 1)
+# I pad dei componenti a foro passante sono collegati alla massa su entrambe le facce:
+# basta un raggio della connessione termica per faccia.
+(rule "raggi_termici"
+    (constraint min_resolved_spokes 1))

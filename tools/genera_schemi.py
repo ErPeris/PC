@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Genera gli schemi KiCad delle due varianti del driver per 3 servomotori.
 
-Uso:  python3 tools/genera_schemi.py [cartella_librerie_simboli]
+Uso:  python3 tools/genera_schemi.py
+      (cartella delle librerie di simboli: variabile KICAD_SYMBOL_DIR)
 
 Le librerie di simboli standard di KiCad servono solo in fase di generazione:
 i simboli vengono incorporati nel file .kicad_sch, quindi il progetto si apre
@@ -14,7 +15,7 @@ import os
 import sys
 import uuid
 
-SYMDIR = sys.argv[1] if len(sys.argv) > 1 else "/usr/share/kicad/symbols"
+SYMDIR = os.environ.get("KICAD_SYMBOL_DIR", "/usr/share/kicad/symbols")
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATE = "2026-10-18"
 
@@ -89,8 +90,16 @@ def S(*items):
     return [Sym(items[0])] + list(items[1:])
 
 
-def uid():
-    return Sym(str(uuid.uuid4()))
+# UUID deterministici: rigenerando lo schema i simboli restano collegati
+# alle impronte del PCB.
+_uid = {"seed": "", "n": 0}
+
+
+def uid(key=None):
+    if key is None:
+        _uid["n"] += 1
+        key = str(_uid["n"])
+    return Sym(str(uuid.uuid5(uuid.NAMESPACE_URL, "servo-driver/%s/%s" % (_uid["seed"], key))))
 
 
 # ---------------------------------------------------------------- librerie
@@ -183,7 +192,7 @@ class Part:
         if self.mirror:
             node.append(S("mirror", Sym("y")))
         node += [S("unit", self.unit), S("in_bom", Sym("yes")), S("on_board", Sym("yes")),
-                 S("dnp", Sym("no")), S("uuid", uid())]
+                 S("dnp", Sym("no")), S("uuid", uid("sym/%s/%d" % (self.ref, self.unit)))]
         txt_angle = 90 if self.rot in (90, 270) else 0
         values = {"Reference": self.ref, "Value": self.value,
                   "Footprint": self.footprint, "Datasheet": "~"}
@@ -288,7 +297,8 @@ class Schematic:
 
     def save(self, path, project):
         self._split_wires()
-        root_uuid = str(uuid.uuid4())
+        _uid["seed"], _uid["n"] = project, 0
+        root_uuid = str(uid("root"))
         tb = S("title_block", S("title", self.title), S("date", DATE), S("rev", "1.0"),
                S("company", ""))
         for i, c in enumerate(self.comments, 1):
@@ -337,7 +347,8 @@ FP = {
     "hdr3": "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical",
     "dip14": "Package_DIP:DIP-14_W7.62mm",
     "to220": "Package_TO_SOT_THT:TO-220-3_Vertical",
-    "to263": "Package_TO_SOT_SMD:TO-263-5_TabPin3",
+    "to220_5": "Package_TO_SOT_THT:TO-220-5_P3.4x3.7mm_StaggerOdd_Lead3.8mm_Vertical",
+    "hole": "MountingHole:MountingHole_3.2mm_M3",
     "r": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
     "c": "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",
     "cp6": "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm",
@@ -462,6 +473,12 @@ def signal_block(sch):
     sch.power("+5V", c3.pin(1))
     sch.power("GND", c3.pin(2))
 
+    # --- fori di fissaggio
+    for i in range(4):
+        sch.part("Mechanical:MountingHole", "H%d" % (i + 1), "M3", (200.66 + 12.7 * i, 40.64), footprint=FP["hole"],
+                 fields={"Reference": (0, -5.08, None, False), "Value": (0, 5.08, None, False)})
+    sch.text("Fori di fissaggio M3", (195.58, 30.48))
+
     sch.text("LEVEL SHIFTER 3.3V -> 5V  (LM324, comparatori non invertenti: IN+ = PWM, IN- = VREF)",
              (68.58, 85.09), size=1.524, bold=True)
 
@@ -501,11 +518,11 @@ def variant_a():
 
 def variant_b():
     sch = Schematic("Driver 3 servo - Variante B (Buck)",
-                    ["Batteria LiPo 2S 7.4V -> 5V con regolatore switching LM2596S-5.0",
+                    ["Batteria LiPo 2S 7.4V -> 5V con regolatore switching LM2596T-5.0",
                      "Level shifter PWM 3.3V -> 5V con LM324"])
-    sch.text("ALIMENTAZIONE - Variante B: regolatore switching LM2596S-5.0", (17.78, 30.48), size=1.524, bold=True)
+    sch.text("ALIMENTAZIONE - Variante B: regolatore switching LM2596T-5.0", (17.78, 30.48), size=1.524, bold=True)
     vin = input_block(sch)
-    u1 = sch.part("Regulator_Switching:LM2596S-5", "U1", "LM2596S-5.0", (99.06, RAIL + 2.54), footprint=FP["to263"],
+    u1 = sch.part("Regulator_Switching:LM2596T-5", "U1", "LM2596T-5.0", (99.06, RAIL + 2.54), footprint=FP["to220_5"],
                   fields={"Reference": (0, -10.16, None, False), "Value": (0, -7.62, None, False)})
     cin = vpart(sch, "Device:C_Polarized", "C4", "100uF 16V", (68.58, RAIL + 3.81), FP["cp8"])
     sch.power("GND", cin.pin(2))
@@ -552,6 +569,8 @@ def notes(sch, lines):
 
 
 def project_file(path, name):
+    if os.path.exists(path):  # contiene anche le regole del PCB: non sovrascrivere
+        return
     with open("/usr/share/kicad/template/kicad.kicad_pro") as f:
         pro = json.load(f)
     pro["meta"]["filename"] = name + ".kicad_pro"

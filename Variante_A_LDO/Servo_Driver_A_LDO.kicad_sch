@@ -1,4 +1,4 @@
-(kicad_sch (version 20230121) (generator eeschema) (uuid 1aff416e-ae8b-4ee8-b4c2-09e067502dcc) (paper "A4")
+(kicad_sch (version 20230121) (generator eeschema) (uuid 6ac733f1-b901-560a-a35a-4220efa78324) (paper "A4")
   (title_block (title "Driver 3 servo - Variante A (LDO)") (date "2026-10-18") (rev "1.0") (company "") (comment 1 "Batteria LiPo 2S 7.4V -> 5V con regolatore lineare LM7805") (comment 2 "Level shifter PWM 3.3V -> 5V con LM324"))
   (lib_symbols
     (symbol "Connector_Generic:Conn_01x02"
@@ -702,252 +702,282 @@
               (font (size 1.27 1.27))))
           (number "3"
             (effects
-              (font (size 1.27 1.27))))))))
-  (junction (at 40.64 50.8) (diameter 0) (color 0 0 0 0) (uuid 1914fff4-d632-4137-bd85-97c2198d5a3a))
-  (junction (at 45.72 50.8) (diameter 0) (color 0 0 0 0) (uuid 2d83660e-4e45-46f8-8f91-be82dcac29b5))
-  (junction (at 50.8 129.54) (diameter 0) (color 0 0 0 0) (uuid add1d2ee-6376-4f70-8882-79ffa04e4df9))
-  (junction (at 53.34 50.8) (diameter 0) (color 0 0 0 0) (uuid dcc258f4-56e4-465a-9ff7-343147513e02))
-  (junction (at 58.42 129.54) (diameter 0) (color 0 0 0 0) (uuid 6f3aaf5c-d91f-4153-881c-9c13773dfdfe))
-  (junction (at 63.5 50.8) (diameter 0) (color 0 0 0 0) (uuid cd7be0e7-4919-483a-9b37-7135c36ffb16))
-  (junction (at 71.12 50.8) (diameter 0) (color 0 0 0 0) (uuid f102665d-7887-4450-84b0-9930aa18d1dc))
-  (junction (at 91.44 50.8) (diameter 0) (color 0 0 0 0) (uuid 1b322d4f-4abc-4f15-9f74-ba2d6ce9b55a))
-  (junction (at 91.44 93.98) (diameter 0) (color 0 0 0 0) (uuid 3242207f-4af3-431c-81ba-1ddd0ab3964e))
-  (junction (at 91.44 114.3) (diameter 0) (color 0 0 0 0) (uuid 12ddb5e7-5086-406b-8f48-58b03f618d49))
-  (junction (at 91.44 134.62) (diameter 0) (color 0 0 0 0) (uuid 0e1be12e-cf1f-41f9-886b-b308bab38b7a))
-  (junction (at 99.06 50.8) (diameter 0) (color 0 0 0 0) (uuid f798f159-5b6f-4629-98a8-6aeb037a5417))
-  (junction (at 111.76 50.8) (diameter 0) (color 0 0 0 0) (uuid 5e880eee-f214-44b2-848b-53c561046312))
+              (font (size 1.27 1.27)))))))
+    (symbol "Mechanical:MountingHole"
+      (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
+      (property "Reference" "H" (at 0 5.08 0)
+        (effects
+          (font (size 1.27 1.27))))
+      (property "Value" "MountingHole" (at 0 3.175 0)
+        (effects
+          (font (size 1.27 1.27))))
+      (property "Footprint" "" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "mounting hole" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Mounting Hole without connection" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "MountingHole*" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (symbol "MountingHole_0_1"
+        (circle (center 0 0) (radius 1.27)
+          (stroke (width 1.27) (type default))
+          (fill (type none))))))
+  (junction (at 40.64 50.8) (diameter 0) (color 0 0 0 0) (uuid 894546e2-d643-51a9-890d-1f3d7b9f3b43))
+  (junction (at 45.72 50.8) (diameter 0) (color 0 0 0 0) (uuid d0454947-cb96-5436-92f3-cc370a423f8a))
+  (junction (at 50.8 129.54) (diameter 0) (color 0 0 0 0) (uuid 44cb90b5-1621-550a-a3c2-c93ce5f4acda))
+  (junction (at 53.34 50.8) (diameter 0) (color 0 0 0 0) (uuid ed40d1d5-be30-5892-a176-58404709c8eb))
+  (junction (at 58.42 129.54) (diameter 0) (color 0 0 0 0) (uuid 2b904c7f-ff4b-5045-a9fa-6ecc1daf7d2f))
+  (junction (at 63.5 50.8) (diameter 0) (color 0 0 0 0) (uuid 4b40aafd-202e-509f-be3c-620049b71bd3))
+  (junction (at 71.12 50.8) (diameter 0) (color 0 0 0 0) (uuid ed7dd100-a316-5d3b-aece-0ff45045a76d))
+  (junction (at 91.44 50.8) (diameter 0) (color 0 0 0 0) (uuid 4362ef43-616c-5dcf-85b5-855bdd03440f))
+  (junction (at 91.44 93.98) (diameter 0) (color 0 0 0 0) (uuid 5560de20-b3df-56c7-adb0-e7ff92b75a26))
+  (junction (at 91.44 114.3) (diameter 0) (color 0 0 0 0) (uuid 2a7e33a7-8298-5f01-996c-1e2d1afb5c3d))
+  (junction (at 91.44 134.62) (diameter 0) (color 0 0 0 0) (uuid 58222929-c4fb-54c5-a28b-f2ad1729ee93))
+  (junction (at 99.06 50.8) (diameter 0) (color 0 0 0 0) (uuid 8381e6c3-2db0-55b0-9241-8944df990b2b))
+  (junction (at 111.76 50.8) (diameter 0) (color 0 0 0 0) (uuid 0bbef0ab-8dfd-5dbc-90eb-d817ea33cfdd))
   (wire
     (pts (xy 35.56 53.34) (xy 38.1 53.34))
-    (stroke (width 0) (type default)) (uuid a4eb0d63-5c22-49a7-91f4-e86b4c031970))
+    (stroke (width 0) (type default)) (uuid 5b28e969-7f6f-5e9c-85f7-228ce7dffe61))
   (wire
     (pts (xy 38.1 53.34) (xy 38.1 58.42))
-    (stroke (width 0) (type default)) (uuid 39b44007-5f6f-4c30-ae8b-bb3dc50be04e))
+    (stroke (width 0) (type default)) (uuid fbc3929f-e852-54e1-912f-a73fd1075cec))
   (wire
     (pts (xy 35.56 50.8) (xy 40.64 50.8))
-    (stroke (width 0) (type default)) (uuid 5cc8268a-0584-413e-939d-b2917e5313d5))
+    (stroke (width 0) (type default)) (uuid 768dd590-a1a5-59f3-ba0f-6f4995c68b51))
   (wire
     (pts (xy 40.64 50.8) (xy 45.72 50.8))
-    (stroke (width 0) (type default)) (uuid 409d350d-d150-4756-87de-4f075fa93d41))
+    (stroke (width 0) (type default)) (uuid a674a97d-c903-5a12-8e2a-49afa7c10dfc))
   (wire
     (pts (xy 45.72 50.8) (xy 53.34 50.8))
-    (stroke (width 0) (type default)) (uuid 64339b5e-9209-4a16-b07d-aeb4a74da24e))
+    (stroke (width 0) (type default)) (uuid 74bd8b10-6434-5ee7-95d2-e860697adfed))
   (wire
     (pts (xy 53.34 50.8) (xy 63.5 50.8))
-    (stroke (width 0) (type default)) (uuid c1408397-e13b-4b7f-9df5-17a5910e9731))
+    (stroke (width 0) (type default)) (uuid 31310d49-b59c-5bc1-a3c7-09bbc30f8145))
   (wire
     (pts (xy 63.5 50.8) (xy 71.12 50.8))
-    (stroke (width 0) (type default)) (uuid f403601e-9f3f-4e50-b77b-fca6c9d43fad))
+    (stroke (width 0) (type default)) (uuid 83c90a2a-a066-58e3-b56f-b20fa9cfdd57))
   (wire
     (pts (xy 71.12 50.8) (xy 73.66 50.8))
-    (stroke (width 0) (type default)) (uuid 8d0bfaf8-8540-4636-86cb-d0dc7be2c5bd))
+    (stroke (width 0) (type default)) (uuid dfaf5eec-8b64-59b3-b347-f02828ea7cf1))
   (wire
     (pts (xy 88.9 50.8) (xy 91.44 50.8))
-    (stroke (width 0) (type default)) (uuid 82338a00-835a-4883-a107-0092fe334545))
+    (stroke (width 0) (type default)) (uuid e3f48468-289b-5188-bfc0-15df7fc290c0))
   (wire
     (pts (xy 91.44 50.8) (xy 99.06 50.8))
-    (stroke (width 0) (type default)) (uuid 19301d86-9fb0-400e-8bea-b0627670a759))
+    (stroke (width 0) (type default)) (uuid d7bd40f8-b99e-56d9-a721-f6968d9f113d))
   (wire
     (pts (xy 99.06 50.8) (xy 111.76 50.8))
-    (stroke (width 0) (type default)) (uuid 4f377e1c-ef22-44d2-8720-b8fcdffe33fc))
+    (stroke (width 0) (type default)) (uuid 3c08d88a-0f26-5f1b-91a5-594250c67a20))
   (wire
     (pts (xy 111.76 50.8) (xy 121.92 50.8))
-    (stroke (width 0) (type default)) (uuid 44192c51-4c53-4394-8d4a-f7f897458b28))
+    (stroke (width 0) (type default)) (uuid bfcbc494-fb26-588c-a0d9-555bdd5a28fc))
   (wire
     (pts (xy 71.12 50.8) (xy 71.12 43.18))
-    (stroke (width 0) (type default)) (uuid 80231c9d-cddc-4bf7-b760-ed612f0bbb18))
+    (stroke (width 0) (type default)) (uuid fbda24f7-6dac-5cb2-b0cb-dc688d3221f3))
   (wire
     (pts (xy 71.12 43.18) (xy 77.47 43.18))
-    (stroke (width 0) (type default)) (uuid 8a584328-1cd8-417e-8751-34646654b2c0))
+    (stroke (width 0) (type default)) (uuid 8e27b985-4dee-5211-9f0a-7ff4d19c41ae))
   (wire
     (pts (xy 85.09 43.18) (xy 91.44 43.18))
-    (stroke (width 0) (type default)) (uuid 2396c40a-1c6f-4285-b419-4aadc1ca37fb))
+    (stroke (width 0) (type default)) (uuid 51f76ece-fc7b-5c3f-9eeb-4a4c8e10a70f))
   (wire
     (pts (xy 91.44 43.18) (xy 91.44 50.8))
-    (stroke (width 0) (type default)) (uuid 465be198-7fe5-4d5f-b74e-dbcb5eb86227))
+    (stroke (width 0) (type default)) (uuid 1afe680c-8b01-5c95-9252-4a38855255f1))
   (wire
     (pts (xy 35.56 96.52) (xy 40.64 96.52))
-    (stroke (width 0) (type default)) (uuid e2076d45-a952-428a-a48a-bfec0d7c249a))
+    (stroke (width 0) (type default)) (uuid 4401ea30-f9d0-5942-a402-efdd0cd4de41))
   (wire
     (pts (xy 35.56 99.06) (xy 48.26 99.06))
-    (stroke (width 0) (type default)) (uuid 3a938473-0b4b-488e-b925-2ea0250cda80))
+    (stroke (width 0) (type default)) (uuid 45832103-7d43-5bde-86ac-e97ceb3b9c32))
   (wire
     (pts (xy 35.56 101.6) (xy 48.26 101.6))
-    (stroke (width 0) (type default)) (uuid 09447fb8-fbcb-46ce-8cc5-8c4f3b29871c))
+    (stroke (width 0) (type default)) (uuid 757d9cb0-29d8-5ba4-b87a-134a2b593322))
   (wire
     (pts (xy 35.56 104.14) (xy 48.26 104.14))
-    (stroke (width 0) (type default)) (uuid da4d0f08-a975-47b1-b374-b4e741fcb819))
+    (stroke (width 0) (type default)) (uuid db50af7f-a5bc-5fe3-82af-c868e72d3fd4))
   (wire
     (pts (xy 50.8 129.54) (xy 58.42 129.54))
-    (stroke (width 0) (type default)) (uuid d0582cf0-9bb9-44de-a729-9b3af7071a50))
+    (stroke (width 0) (type default)) (uuid ee6ae98b-42d9-5bf4-b985-ae1faf75d31e))
   (wire
     (pts (xy 58.42 129.54) (xy 66.04 129.54))
-    (stroke (width 0) (type default)) (uuid 9577de75-e666-4e42-94a2-0fbbc3ba1671))
+    (stroke (width 0) (type default)) (uuid 59c7855c-adb5-5e75-aa4c-c5510df968e8))
   (wire
     (pts (xy 83.82 93.98) (xy 91.44 93.98))
-    (stroke (width 0) (type default)) (uuid ca5cbad5-741a-409e-8721-f40e5e529f14))
+    (stroke (width 0) (type default)) (uuid 8c152e47-f3a1-5250-8336-31763ffd33f5))
   (wire
     (pts (xy 91.44 93.98) (xy 104.14 93.98))
-    (stroke (width 0) (type default)) (uuid 817785b0-4d84-4db4-a651-c9007e7884f5))
+    (stroke (width 0) (type default)) (uuid 5c5f6bad-fa44-58c3-b0fc-d9c264053f44))
   (wire
     (pts (xy 101.6 99.06) (xy 104.14 99.06))
-    (stroke (width 0) (type default)) (uuid fd90504a-3015-4587-907b-d982cdd3831d))
+    (stroke (width 0) (type default)) (uuid 6f948c98-67ba-5242-a99f-733ddb1af17e))
   (wire
     (pts (xy 83.82 114.3) (xy 91.44 114.3))
-    (stroke (width 0) (type default)) (uuid 94c93fef-0d11-4567-9559-01d247596a97))
+    (stroke (width 0) (type default)) (uuid 84786b7d-57d8-5d8f-aacb-065d12fa81dc))
   (wire
     (pts (xy 91.44 114.3) (xy 104.14 114.3))
-    (stroke (width 0) (type default)) (uuid 7f5a45e1-4173-46a7-b7af-a308eff10dbb))
+    (stroke (width 0) (type default)) (uuid edb01109-82ff-533e-8d56-e17e52c9e0d7))
   (wire
     (pts (xy 101.6 119.38) (xy 104.14 119.38))
-    (stroke (width 0) (type default)) (uuid 4bedb1f5-2fc6-4d8c-900f-23e1498b0e3c))
+    (stroke (width 0) (type default)) (uuid 27cd5b71-6d98-5349-9c15-13262b5ff118))
   (wire
     (pts (xy 83.82 134.62) (xy 91.44 134.62))
-    (stroke (width 0) (type default)) (uuid 52bb5605-7b78-4a00-b60d-26b2c980b4ed))
+    (stroke (width 0) (type default)) (uuid 3370fd14-6d73-5094-991a-0abc866dfd86))
   (wire
     (pts (xy 91.44 134.62) (xy 104.14 134.62))
-    (stroke (width 0) (type default)) (uuid d1fe2039-6bfb-4e87-adf4-71509552408a))
+    (stroke (width 0) (type default)) (uuid 193ef151-2f27-54f5-b15d-7b120bba1dbd))
   (wire
     (pts (xy 101.6 139.7) (xy 104.14 139.7))
-    (stroke (width 0) (type default)) (uuid e47ea0f4-d465-40cd-9084-ef7bf6820321))
+    (stroke (width 0) (type default)) (uuid 59e4f536-5888-5e52-8180-187dca4f8efc))
   (wire
     (pts (xy 119.38 96.52) (xy 124.46 96.52))
-    (stroke (width 0) (type default)) (uuid f88e952c-c53d-40db-b634-b6152a649577))
+    (stroke (width 0) (type default)) (uuid 502b4311-6acd-532b-a960-7645182d5d84))
   (wire
     (pts (xy 124.46 96.52) (xy 147.32 96.52))
-    (stroke (width 0) (type default)) (uuid 40de4f10-b211-448f-956a-c0558561ffba))
+    (stroke (width 0) (type default)) (uuid 42598590-05d6-5385-af45-f3e71efc6fd5))
   (wire
     (pts (xy 147.32 96.52) (xy 147.32 99.06))
-    (stroke (width 0) (type default)) (uuid a4e9e320-c16d-42dd-b04e-4a3a1c07549b))
+    (stroke (width 0) (type default)) (uuid bb7de001-db6d-5324-9b76-f98946baaa9d))
   (wire
     (pts (xy 147.32 99.06) (xy 165.1 99.06))
-    (stroke (width 0) (type default)) (uuid 5ebc3119-3036-4420-95cf-eccdb0d9eef7))
+    (stroke (width 0) (type default)) (uuid 9d345071-eabc-5215-8134-f84229fab764))
   (wire
     (pts (xy 165.1 93.98) (xy 160.02 93.98))
-    (stroke (width 0) (type default)) (uuid 665d808f-29bb-4d36-b429-0b5177939eab))
+    (stroke (width 0) (type default)) (uuid bc39bbc9-2ef3-5695-ab89-1ee38ff78af7))
   (wire
     (pts (xy 165.1 96.52) (xy 160.02 96.52))
-    (stroke (width 0) (type default)) (uuid e1c78732-4f92-4c68-9333-4935108e1fc8))
+    (stroke (width 0) (type default)) (uuid 56713601-f1fd-567c-a47c-53a8876aa1df))
   (wire
     (pts (xy 119.38 116.84) (xy 124.46 116.84))
-    (stroke (width 0) (type default)) (uuid 72e44d0b-bc37-4029-a237-87bf69edf07e))
+    (stroke (width 0) (type default)) (uuid 32e1b058-846b-561e-bd3b-20935efbaf25))
   (wire
     (pts (xy 124.46 116.84) (xy 147.32 116.84))
-    (stroke (width 0) (type default)) (uuid e415532c-9ae7-4b58-880d-04456a828533))
+    (stroke (width 0) (type default)) (uuid 75588022-ec51-5ee5-be8f-aec3b73cde83))
   (wire
     (pts (xy 147.32 116.84) (xy 147.32 119.38))
-    (stroke (width 0) (type default)) (uuid ae72ca77-1247-4979-a76f-ba782ba8f521))
+    (stroke (width 0) (type default)) (uuid abab98f1-3e18-5f42-af81-8c4d0b935f39))
   (wire
     (pts (xy 147.32 119.38) (xy 165.1 119.38))
-    (stroke (width 0) (type default)) (uuid 8681b42e-b1a9-4bc5-9d36-375e4bb4115b))
+    (stroke (width 0) (type default)) (uuid e1eb8dd2-f741-5b5f-8c47-994d8429fdb9))
   (wire
     (pts (xy 165.1 114.3) (xy 160.02 114.3))
-    (stroke (width 0) (type default)) (uuid e78f513c-7259-4df6-93d5-c630192599aa))
+    (stroke (width 0) (type default)) (uuid 303d64d1-4d3a-5733-8c3c-ae67b6a816c9))
   (wire
     (pts (xy 165.1 116.84) (xy 160.02 116.84))
-    (stroke (width 0) (type default)) (uuid f984b83a-ecf0-4cd5-b53c-b8882edb5cf1))
+    (stroke (width 0) (type default)) (uuid e5b583b9-1ec0-5074-b0ab-48bf573bf5b8))
   (wire
     (pts (xy 119.38 137.16) (xy 124.46 137.16))
-    (stroke (width 0) (type default)) (uuid d8624da5-0656-432e-811b-3ebd50741df5))
+    (stroke (width 0) (type default)) (uuid 562727ac-74d1-5632-847a-ba1efe3b73a7))
   (wire
     (pts (xy 124.46 137.16) (xy 147.32 137.16))
-    (stroke (width 0) (type default)) (uuid e77ada4b-a876-429c-80d4-7d3f6ecaced7))
+    (stroke (width 0) (type default)) (uuid 260fa205-fda6-5bd2-b031-fd3292d39180))
   (wire
     (pts (xy 147.32 137.16) (xy 147.32 139.7))
-    (stroke (width 0) (type default)) (uuid 094ba8f8-56b4-4263-8e16-326a5312a127))
+    (stroke (width 0) (type default)) (uuid c3d46648-5996-52cb-80e5-707f97a5a187))
   (wire
     (pts (xy 147.32 139.7) (xy 165.1 139.7))
-    (stroke (width 0) (type default)) (uuid 6a9a2768-bc45-41d2-b685-7ade29bdd1a9))
+    (stroke (width 0) (type default)) (uuid 04a45ee5-fa3c-58df-8cad-24d5d8ed52ab))
   (wire
     (pts (xy 165.1 134.62) (xy 160.02 134.62))
-    (stroke (width 0) (type default)) (uuid 920384bb-f58f-4b40-9e04-49fc79c07ba6))
+    (stroke (width 0) (type default)) (uuid 7f172514-c02f-5de8-92bf-0715cdab9b62))
   (wire
     (pts (xy 165.1 137.16) (xy 160.02 137.16))
-    (stroke (width 0) (type default)) (uuid 16d41e05-e12c-4167-955c-a0645c8def56))
+    (stroke (width 0) (type default)) (uuid cbb33bfb-d803-571a-9cfc-c74d54cbb786))
   (wire
     (pts (xy 104.14 154.94) (xy 99.06 154.94))
-    (stroke (width 0) (type default)) (uuid f63f6d49-2e56-44e1-b366-52f69622afb0))
+    (stroke (width 0) (type default)) (uuid 00287a04-83bf-58d0-b2b6-61fb5fb20798))
   (wire
     (pts (xy 104.14 160.02) (xy 101.6 160.02))
-    (stroke (width 0) (type default)) (uuid 2df80fd9-7797-44b6-8b94-e83e91c5fe65))
+    (stroke (width 0) (type default)) (uuid 5a2cced6-361f-5d98-a4e8-d2482e7dbd32))
   (wire
     (pts (xy 101.6 160.02) (xy 101.6 165.1))
-    (stroke (width 0) (type default)) (uuid a767fab9-783c-4956-b525-d7f27e065c03))
+    (stroke (width 0) (type default)) (uuid 250d14f2-7162-571e-a442-23dde3e60b43))
   (wire
     (pts (xy 101.6 165.1) (xy 121.92 165.1))
-    (stroke (width 0) (type default)) (uuid 00f75aef-4a80-466c-916a-4735b33fed8e))
+    (stroke (width 0) (type default)) (uuid 0b1b18f3-8035-5565-85ca-94966249ea6d))
   (wire
     (pts (xy 121.92 165.1) (xy 121.92 157.48))
-    (stroke (width 0) (type default)) (uuid 57c6d26a-6a0b-4d55-aa43-c6aafd9ed3ec))
+    (stroke (width 0) (type default)) (uuid ba3dcee2-e75d-544f-a175-b9abc003206f))
   (wire
     (pts (xy 121.92 157.48) (xy 119.38 157.48))
-    (stroke (width 0) (type default)) (uuid a5d60af2-d311-43f4-a311-d48776ab59f2))
+    (stroke (width 0) (type default)) (uuid ceefcb86-2b36-5091-b77b-d45109fcd054))
   (label "PWM1_IN" (at 48.26 99.06 0)
     (effects
-      (font (size 1.27 1.27)) (justify left bottom)) (uuid 669977ee-5bac-4c0f-aaad-015e55bee537))
+      (font (size 1.27 1.27)) (justify left bottom)) (uuid eb6e8ed0-6668-5a32-9d8c-c3c803b09026))
   (label "PWM2_IN" (at 48.26 101.6 0)
     (effects
-      (font (size 1.27 1.27)) (justify left bottom)) (uuid 6b0d45f7-9e80-4b3e-9b3b-4c461b8c2384))
+      (font (size 1.27 1.27)) (justify left bottom)) (uuid 299f3cf3-1fd1-5866-97cc-7bee7073b5cf))
   (label "PWM3_IN" (at 48.26 104.14 0)
     (effects
-      (font (size 1.27 1.27)) (justify left bottom)) (uuid 487c0ca4-4c18-45d0-9e1b-c3847de9d4d2))
+      (font (size 1.27 1.27)) (justify left bottom)) (uuid 6597f0fe-fda0-5d47-b0b3-c2973ea0c20f))
   (label "VREF" (at 66.04 129.54 0)
     (effects
-      (font (size 1.27 1.27)) (justify left bottom)) (uuid 23ed0018-33fa-4697-9ae8-b59528a01ecb))
+      (font (size 1.27 1.27)) (justify left bottom)) (uuid fb289c28-cd1a-53f3-bf93-10c8b453a9f8))
   (label "PWM1_IN" (at 83.82 93.98 180)
     (effects
-      (font (size 1.27 1.27)) (justify right bottom)) (uuid aae78dbd-20c0-46ae-af4f-7c56ca0113b4))
+      (font (size 1.27 1.27)) (justify right bottom)) (uuid db275d16-2ede-5988-99e2-107e8eaf50cd))
   (label "VREF" (at 101.6 99.06 180)
     (effects
-      (font (size 1.27 1.27)) (justify right bottom)) (uuid 68bac83b-5629-40dd-ad7f-15071ad4bd6c))
+      (font (size 1.27 1.27)) (justify right bottom)) (uuid 14d4ad51-ac69-5c9f-bf50-f6eeb689a186))
   (label "PWM2_IN" (at 83.82 114.3 180)
     (effects
-      (font (size 1.27 1.27)) (justify right bottom)) (uuid 33428430-02e6-47dc-b355-5610cdfa18db))
+      (font (size 1.27 1.27)) (justify right bottom)) (uuid 8da406c4-224b-523b-ad3d-921910b74a41))
   (label "VREF" (at 101.6 119.38 180)
     (effects
-      (font (size 1.27 1.27)) (justify right bottom)) (uuid 9f2b2e19-6f96-49cb-b34a-65f2b3107298))
+      (font (size 1.27 1.27)) (justify right bottom)) (uuid 4f68e2ca-46f3-5039-bda9-00072c991124))
   (label "PWM3_IN" (at 83.82 134.62 180)
     (effects
-      (font (size 1.27 1.27)) (justify right bottom)) (uuid 114be467-219a-4432-b80b-145fe2fb49f4))
+      (font (size 1.27 1.27)) (justify right bottom)) (uuid 932aab17-b071-522a-9a3c-774584a115c1))
   (label "VREF" (at 101.6 139.7 180)
     (effects
-      (font (size 1.27 1.27)) (justify right bottom)) (uuid 5699714a-d112-4cb7-8cac-2d1ee60c4c14))
+      (font (size 1.27 1.27)) (justify right bottom)) (uuid 41582a5f-2a74-5823-809e-a9c769d198ff))
   (label "PWM1_5V" (at 124.46 96.52 0)
     (effects
-      (font (size 1.27 1.27)) (justify left bottom)) (uuid b7393524-5337-472c-93c4-8c88eee23358))
+      (font (size 1.27 1.27)) (justify left bottom)) (uuid 89a9e814-4860-5174-b5c1-9293071e967d))
   (label "PWM2_5V" (at 124.46 116.84 0)
     (effects
-      (font (size 1.27 1.27)) (justify left bottom)) (uuid 7453b399-c779-4525-8188-32033eae7943))
+      (font (size 1.27 1.27)) (justify left bottom)) (uuid 5de27088-92e1-560d-b645-221f86da5a6e))
   (label "PWM3_5V" (at 124.46 137.16 0)
     (effects
-      (font (size 1.27 1.27)) (justify left bottom)) (uuid a3c38600-145c-4056-8cf3-62ba3352e8db))
+      (font (size 1.27 1.27)) (justify left bottom)) (uuid 2b921281-f11e-5ce2-a851-4159c822e453))
   (text "ALIMENTAZIONE - Variante A: regolatore lineare LM7805" (at 17.78 30.48 0)
     (effects
-      (font (size 1.524 1.524) bold) (justify left bottom)) (uuid 9c55936c-6643-432c-a4b6-1a92e8513288))
+      (font (size 1.524 1.524) bold) (justify left bottom)) (uuid b3f70456-6a1d-570f-aa98-99065782f89e))
   (text "Ingresso LiPo 2S\n(6.0 ... 8.4 V)" (at 17.78 41.91 0)
     (effects
-      (font (size 1.27 1.27)) (justify left bottom)) (uuid d6aecc0a-2751-48ff-b9a6-61ebf36306a8))
+      (font (size 1.27 1.27)) (justify left bottom)) (uuid 7c60e6f9-973d-5186-b1cc-d5ea08020cfd))
   (text "D1: protezione da correnti inverse\n(catodo su IN, anodo su OUT)" (at 96.52 40.64 0)
     (effects
-      (font (size 1.27 1.27)) (justify left bottom)) (uuid ad13edd6-806f-40fa-b4d3-439b49eb8691))
+      (font (size 1.27 1.27)) (justify left bottom)) (uuid d36947c8-4bb4-5ae8-98c0-4e85b27a80bf))
   (text "Dal microcontrollore:\n1 = GND\n2 = PWM1  3 = PWM2  4 = PWM3" (at 17.78 87.63 0)
     (effects
-      (font (size 1.27 1.27)) (justify left bottom)) (uuid ab402bc7-b591-45c5-9114-c9871173d537))
+      (font (size 1.27 1.27)) (justify left bottom)) (uuid a92826d4-b4e0-5dbb-aaa7-7d3fe890c000))
   (text "VREF = 5V x 10k / (22k + 10k)\n       = 1.56 V (soglia)" (at 25.4 147.32 0)
     (effects
-      (font (size 1.27 1.27)) (justify left bottom)) (uuid 7e3df621-4175-4e45-b7c5-a8fc278a3655))
+      (font (size 1.27 1.27)) (justify left bottom)) (uuid d1fa0a29-4af2-5f33-9584-f4a92bff8ad1))
   (text "Servo: 1 = GND, 2 = +5V, 3 = PWM 5V" (at 152.4 87.63 0)
     (effects
-      (font (size 1.27 1.27)) (justify left bottom)) (uuid 4387a071-5ec8-4a97-a47a-ccc07a377e29))
+      (font (size 1.27 1.27)) (justify left bottom)) (uuid 7082cd41-0c27-5517-85fa-47f9582c0c06))
   (text "U2D non usata:\nIN+ a GND, uscita\nretroazionata su IN-" (at 68.58 154.94 0)
     (effects
-      (font (size 1.27 1.27)) (justify left bottom)) (uuid 0a6c7f77-339d-4613-bf09-82b3e4929210))
+      (font (size 1.27 1.27)) (justify left bottom)) (uuid 1b1f4f89-3913-5134-a21d-0cae7b685b32))
+  (text "Fori di fissaggio M3" (at 195.58 30.48 0)
+    (effects
+      (font (size 1.27 1.27)) (justify left bottom)) (uuid 1c279df9-8fcd-503e-8ad5-6c3a060017a8))
   (text "LEVEL SHIFTER 3.3V -> 5V  (LM324, comparatori non invertenti: IN+ = PWM, IN- = VREF)" (at 68.58 85.09 0)
     (effects
-      (font (size 1.524 1.524) bold) (justify left bottom)) (uuid 033eb8ca-6ff1-4a29-b30a-327d40ae8821))
+      (font (size 1.524 1.524) bold) (justify left bottom)) (uuid 72fdfec3-7e75-5dec-b8ad-8d16f569093b))
   (text "NOTE\n- U1 dissipa (Vin - 5V) x I: con 7.4V e 1A sono circa 2.4W -> serve un dissipatore sul TO-220.\n- Il 7805 richiede circa 2V di caduta: sotto ~7V di batteria l'uscita scende sotto 5V.\n  Alternativa a basso dropout con lo stesso pinout TO-220: LM2940-5.0.\n- LM324 alimentato a 5V: l'uscita alta arriva a ~3.5-3.8V (non rail-to-rail). Ai servo basta;\n  per avere 5V pieni montare MCP6004 o LMV324 nello stesso zoccolo DIP-14 (stesso pinout).\n- R3-R5 (pull-down) tengono basse le uscite se il microcontrollore e' scollegato." (at 17.78 193.04 0)
     (effects
-      (font (size 1.27 1.27)) (justify left bottom)) (uuid 8ecaa23b-cd6f-475b-86a6-7454cae2320e))
-  (symbol (lib_id "Connector_Generic:Conn_01x02") (at 30.48 50.8 0) (mirror y) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 3c70fb47-1c15-4976-b5a7-8845655ecbf0)
+      (font (size 1.27 1.27)) (justify left bottom)) (uuid 7f7018e9-67ee-5abd-947a-a4eda27f7e2b))
+  (symbol (lib_id "Connector_Generic:Conn_01x02") (at 30.48 50.8 0) (mirror y) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 24fb7522-a833-5356-a25d-67201e05d66e)
     (property "Reference" "J1" (at 30.48 45.72 0)
       (effects
         (font (size 1.27 1.27))))
@@ -960,12 +990,12 @@
     (property "Datasheet" "~" (at 30.48 50.8 0)
       (effects
         (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 81a3c976-f173-47b1-9b9f-c771382b1b52))
-    (pin "2" (uuid 3362ac23-9c03-400d-8731-f8fe8306ac57))
+    (pin "1" (uuid d100c0cc-135b-58a9-a9aa-64e5566d107d))
+    (pin "2" (uuid e3dafe54-5da4-5023-86ca-b78626ff011e))
     (instances
       (project "Servo_Driver_A_LDO"
-        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "J1") (unit 1)))))
-  (symbol (lib_id "power:+BATT") (at 40.64 50.8 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 297c6faf-aa4e-47f4-b953-325cf07c6429)
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "J1") (unit 1)))))
+  (symbol (lib_id "power:+BATT") (at 40.64 50.8 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 51432b82-070c-5b3e-9578-a6f71edae1c6)
     (property "Reference" "#PWR01" (at 40.64 50.8 0)
       (effects
         (font (size 1.27 1.27)) hide))
@@ -978,11 +1008,11 @@
     (property "Datasheet" "~" (at 40.64 50.8 0)
       (effects
         (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 56277ce1-e062-41de-bba4-bf1a96263d84))
+    (pin "1" (uuid 915be5ec-5f9a-586e-bf34-4e08a6232a72))
     (instances
       (project "Servo_Driver_A_LDO"
-        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR01") (unit 1)))))
-  (symbol (lib_id "Device:C_Polarized") (at 45.72 54.61 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid b92a1bd0-4b66-4390-8752-f94d70999303)
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "#PWR01") (unit 1)))))
+  (symbol (lib_id "Device:C_Polarized") (at 45.72 54.61 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 3dc0c304-f817-5530-873d-f4c66d568054)
     (property "Reference" "C1" (at 48.26 53.34 0)
       (effects
         (font (size 1.27 1.27)) (justify left)))
@@ -995,12 +1025,12 @@
     (property "Datasheet" "~" (at 45.72 54.61 0)
       (effects
         (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 546321b5-5bd9-4830-9c79-dbcc5dbea25d))
-    (pin "2" (uuid 95e00941-d9ff-4a28-ae25-8964520e8347))
+    (pin "1" (uuid 7fba968f-2752-5e27-bf1d-8015dad0d1cf))
+    (pin "2" (uuid 19c66369-b7b6-5b67-9710-931a1472f519))
     (instances
       (project "Servo_Driver_A_LDO"
-        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "C1") (unit 1)))))
-  (symbol (lib_id "power:GND") (at 45.72 58.42 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 39797a9a-7dd6-45f0-bbfd-4528b4d1c4eb)
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "C1") (unit 1)))))
+  (symbol (lib_id "power:GND") (at 45.72 58.42 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 9af38421-6dcf-5b05-b62b-e372ff4e1891)
     (property "Reference" "#PWR02" (at 45.72 58.42 0)
       (effects
         (font (size 1.27 1.27)) hide))
@@ -1013,11 +1043,11 @@
     (property "Datasheet" "~" (at 45.72 58.42 0)
       (effects
         (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 7e46c720-eb71-4c39-a87b-e1989a93e01a))
+    (pin "1" (uuid 06b390df-adaa-5eb9-a9e8-9a801fc712df))
     (instances
       (project "Servo_Driver_A_LDO"
-        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR02") (unit 1)))))
-  (symbol (lib_id "power:GND") (at 38.1 58.42 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 5863d2f1-31e5-414a-a841-a051174f4a40)
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "#PWR02") (unit 1)))))
+  (symbol (lib_id "power:GND") (at 38.1 58.42 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid f85a0546-a016-515e-acad-d0119514d5f8)
     (property "Reference" "#PWR03" (at 38.1 58.42 0)
       (effects
         (font (size 1.27 1.27)) hide))
@@ -1030,11 +1060,11 @@
     (property "Datasheet" "~" (at 38.1 58.42 0)
       (effects
         (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 659329bd-ee6e-46ad-868c-1a41fd983fd7))
+    (pin "1" (uuid dfac28e9-2967-5ea8-8ac0-c7f918873936))
     (instances
       (project "Servo_Driver_A_LDO"
-        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR03") (unit 1)))))
-  (symbol (lib_id "power:PWR_FLAG") (at 53.34 50.8 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 7955b917-7321-4341-8280-90eb0997faf0)
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "#PWR03") (unit 1)))))
+  (symbol (lib_id "power:PWR_FLAG") (at 53.34 50.8 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 712c8af3-b056-5b2b-9f5a-06fbe76c102b)
     (property "Reference" "#FLG04" (at 53.34 50.8 0)
       (effects
         (font (size 1.27 1.27)) hide))
@@ -1047,11 +1077,11 @@
     (property "Datasheet" "~" (at 53.34 50.8 0)
       (effects
         (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 931d514b-0dbe-4c4f-985b-a13e60bb148f))
+    (pin "1" (uuid 1e68ae69-efb3-5b12-99fc-f0fec7f3093e))
     (instances
       (project "Servo_Driver_A_LDO"
-        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#FLG04") (unit 1)))))
-  (symbol (lib_id "power:PWR_FLAG") (at 25.4 68.58 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 58ef3eae-265c-470b-a836-ea80389ba4a0)
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "#FLG04") (unit 1)))))
+  (symbol (lib_id "power:PWR_FLAG") (at 25.4 68.58 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 75fe64a4-ad83-56b8-9856-d3837d6a0d5c)
     (property "Reference" "#FLG05" (at 25.4 68.58 0)
       (effects
         (font (size 1.27 1.27)) hide))
@@ -1064,11 +1094,11 @@
     (property "Datasheet" "~" (at 25.4 68.58 0)
       (effects
         (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 5ee29fbb-cf38-458f-9b32-de344984b681))
+    (pin "1" (uuid 40050668-f34e-5787-ae4e-f1011c0fa078))
     (instances
       (project "Servo_Driver_A_LDO"
-        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#FLG05") (unit 1)))))
-  (symbol (lib_id "power:GND") (at 25.4 68.58 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid ef0d71be-1d46-4967-b72d-aedecad83c73)
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "#FLG05") (unit 1)))))
+  (symbol (lib_id "power:GND") (at 25.4 68.58 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 0ee6b547-0eb5-5e87-9aa3-81026c16aa51)
     (property "Reference" "#PWR06" (at 25.4 68.58 0)
       (effects
         (font (size 1.27 1.27)) hide))
@@ -1081,11 +1111,11 @@
     (property "Datasheet" "~" (at 25.4 68.58 0)
       (effects
         (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 9ee48534-7068-4b40-bb7f-5b0324949506))
+    (pin "1" (uuid e9464363-41a4-5256-9f8b-a8b4d87529e3))
     (instances
       (project "Servo_Driver_A_LDO"
-        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR06") (unit 1)))))
-  (symbol (lib_id "Regulator_Linear:LM7805_TO220") (at 81.28 50.8 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 79964122-be82-4c06-a78e-8faaa222c21d)
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "#PWR06") (unit 1)))))
+  (symbol (lib_id "Regulator_Linear:LM7805_TO220") (at 81.28 50.8 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 5ba52c41-bb19-5ebc-aad1-e08e731b45b3)
     (property "Reference" "U1" (at 85.09 58.42 0)
       (effects
         (font (size 1.27 1.27)) (justify left)))
@@ -1098,13 +1128,13 @@
     (property "Datasheet" "~" (at 81.28 50.8 0)
       (effects
         (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid f4391c16-150a-4df0-a434-5b06b6325969))
-    (pin "2" (uuid 3b1baba9-0768-4db5-b56d-9aff7716f14d))
-    (pin "3" (uuid d0320404-f9e8-4cec-919c-cd058a8b5114))
+    (pin "1" (uuid c0206221-1581-532a-9573-090d1be92752))
+    (pin "2" (uuid 123db107-8116-5b7a-89bb-42fc29d6a8ac))
+    (pin "3" (uuid aa41eea3-6d23-572a-98ed-246c4335cae6))
     (instances
       (project "Servo_Driver_A_LDO"
-        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "U1") (unit 1)))))
-  (symbol (lib_id "Device:C") (at 63.5 54.61 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 0fae0c5f-093e-41b1-a861-cc8fc4e2e710)
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "U1") (unit 1)))))
+  (symbol (lib_id "Device:C") (at 63.5 54.61 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid c81c3f4f-add4-5f61-8c0e-1a6d2995686b)
     (property "Reference" "C4" (at 66.04 53.34 0)
       (effects
         (font (size 1.27 1.27)) (justify left)))
@@ -1117,12 +1147,12 @@
     (property "Datasheet" "~" (at 63.5 54.61 0)
       (effects
         (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 8bd8b686-254e-4007-9dec-f7295ba34a99))
-    (pin "2" (uuid 7afa3d70-e576-4685-bffc-48326a86b1ad))
+    (pin "1" (uuid d0c9b405-2965-54db-9c13-fb3e6c2da490))
+    (pin "2" (uuid 738d9e5a-6f57-564c-8ec3-ae7ed536c43e))
     (instances
       (project "Servo_Driver_A_LDO"
-        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "C4") (unit 1)))))
-  (symbol (lib_id "Device:C") (at 99.06 54.61 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 5b53a52b-1bf5-4b7c-a775-f5c5ffc375bc)
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "C4") (unit 1)))))
+  (symbol (lib_id "Device:C") (at 99.06 54.61 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 33c1c522-8138-5784-b38e-ab099e05d611)
     (property "Reference" "C5" (at 101.6 53.34 0)
       (effects
         (font (size 1.27 1.27)) (justify left)))
@@ -1135,12 +1165,12 @@
     (property "Datasheet" "~" (at 99.06 54.61 0)
       (effects
         (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid d558ad07-08e5-44e7-962d-a7fb211a94c9))
-    (pin "2" (uuid 761fdd16-542d-4c90-a967-3da445c38dcb))
+    (pin "1" (uuid 038f2d57-456b-5904-b105-e0b3ba67e358))
+    (pin "2" (uuid 50f3e65d-bedc-5981-b017-65e3215088e4))
     (instances
       (project "Servo_Driver_A_LDO"
-        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "C5") (unit 1)))))
-  (symbol (lib_id "Device:C_Polarized") (at 111.76 54.61 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid d167ac4c-22c2-44ab-b74d-0ced9c1ca431)
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "C5") (unit 1)))))
+  (symbol (lib_id "Device:C_Polarized") (at 111.76 54.61 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 9a4ffc85-c12b-5270-9f72-2c65ef06b1d4)
     (property "Reference" "C6" (at 114.3 53.34 0)
       (effects
         (font (size 1.27 1.27)) (justify left)))
@@ -1153,12 +1183,12 @@
     (property "Datasheet" "~" (at 111.76 54.61 0)
       (effects
         (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid ac54e520-0c97-4d21-a6e7-9111d3c80d89))
-    (pin "2" (uuid c74cee73-2ca8-4fbf-a855-55c0512db570))
+    (pin "1" (uuid 65ce50b9-353c-5c32-bff8-ec72a9f7e3bb))
+    (pin "2" (uuid 0e5af4c9-54bb-579b-80ea-4b2e349be2e6))
     (instances
       (project "Servo_Driver_A_LDO"
-        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "C6") (unit 1)))))
-  (symbol (lib_id "Diode:1N4007") (at 81.28 43.18 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 3aee6840-7741-45e8-8379-aa1f9f1a66fd)
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "C6") (unit 1)))))
+  (symbol (lib_id "Diode:1N4007") (at 81.28 43.18 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 859e2d97-2d51-509d-9fd1-2b34aa0c022b)
     (property "Reference" "D1" (at 81.28 38.1 0)
       (effects
         (font (size 1.27 1.27))))
@@ -1171,12 +1201,12 @@
     (property "Datasheet" "~" (at 81.28 43.18 0)
       (effects
         (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 3f3fce9c-6a73-46d8-9415-302b08c6850c))
-    (pin "2" (uuid d3b9f301-e6fe-43d4-b62c-069a1f4fdc70))
+    (pin "1" (uuid 4e680eae-0869-56ca-8673-153cf1f21b69))
+    (pin "2" (uuid 3aa68d29-5fe1-5590-a54b-e532c6714404))
     (instances
       (project "Servo_Driver_A_LDO"
-        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "D1") (unit 1)))))
-  (symbol (lib_id "power:GND") (at 63.5 58.42 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 2497b276-2b84-4829-8c5f-1cf1ec90ffbf)
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "D1") (unit 1)))))
+  (symbol (lib_id "power:GND") (at 63.5 58.42 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid c4eab5e9-3eff-5b94-a4c5-3a658a21cc29)
     (property "Reference" "#PWR07" (at 63.5 58.42 0)
       (effects
         (font (size 1.27 1.27)) hide))
@@ -1189,11 +1219,11 @@
     (property "Datasheet" "~" (at 63.5 58.42 0)
       (effects
         (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 80ba0780-901d-4057-8a53-45871a51b438))
+    (pin "1" (uuid 0bdded27-d328-5339-9692-7197d3ac38a9))
     (instances
       (project "Servo_Driver_A_LDO"
-        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR07") (unit 1)))))
-  (symbol (lib_id "power:GND") (at 99.06 58.42 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 76170d91-89cb-4306-983a-935dee9133c2)
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "#PWR07") (unit 1)))))
+  (symbol (lib_id "power:GND") (at 99.06 58.42 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 8eeb4793-87fa-5672-ac0e-6523a38bf1ca)
     (property "Reference" "#PWR08" (at 99.06 58.42 0)
       (effects
         (font (size 1.27 1.27)) hide))
@@ -1206,11 +1236,11 @@
     (property "Datasheet" "~" (at 99.06 58.42 0)
       (effects
         (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid dfd86a35-80b7-45da-b1ae-da4a4ba2e2cb))
+    (pin "1" (uuid fd51ace8-dfee-5429-8665-b3e61d486c30))
     (instances
       (project "Servo_Driver_A_LDO"
-        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR08") (unit 1)))))
-  (symbol (lib_id "power:GND") (at 111.76 58.42 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 089ecc2a-9fdd-4cd6-abf3-069e1088b12f)
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "#PWR08") (unit 1)))))
+  (symbol (lib_id "power:GND") (at 111.76 58.42 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 204cca3a-ec8c-594a-bfa8-898612573bf3)
     (property "Reference" "#PWR09" (at 111.76 58.42 0)
       (effects
         (font (size 1.27 1.27)) hide))
@@ -1223,11 +1253,11 @@
     (property "Datasheet" "~" (at 111.76 58.42 0)
       (effects
         (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 325bb634-7b4a-4bec-ab31-ba0161a77c6b))
+    (pin "1" (uuid 8d57f074-ccf6-58b5-949e-d0af84bc9251))
     (instances
       (project "Servo_Driver_A_LDO"
-        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR09") (unit 1)))))
-  (symbol (lib_id "power:GND") (at 81.28 58.42 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 68a00af1-37ff-496c-8686-ea8b617288b6)
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "#PWR09") (unit 1)))))
+  (symbol (lib_id "power:GND") (at 81.28 58.42 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid c4581127-c411-55ea-992f-72cb070f8ca7)
     (property "Reference" "#PWR10" (at 81.28 58.42 0)
       (effects
         (font (size 1.27 1.27)) hide))
@@ -1240,11 +1270,11 @@
     (property "Datasheet" "~" (at 81.28 58.42 0)
       (effects
         (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 3b6c0b2e-a744-4c9c-a649-53a13ba1a64c))
+    (pin "1" (uuid 826218f5-580a-58ec-bd8f-9189a04976c2))
     (instances
       (project "Servo_Driver_A_LDO"
-        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR10") (unit 1)))))
-  (symbol (lib_id "power:+5V") (at 121.92 50.8 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 9f337cb7-0dde-436c-b916-071af092a651)
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "#PWR10") (unit 1)))))
+  (symbol (lib_id "power:+5V") (at 121.92 50.8 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 7cdab08d-0393-505c-a225-97b3c441189e)
     (property "Reference" "#PWR11" (at 121.92 50.8 0)
       (effects
         (font (size 1.27 1.27)) hide))
@@ -1257,11 +1287,11 @@
     (property "Datasheet" "~" (at 121.92 50.8 0)
       (effects
         (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 0a049e63-5dee-4625-9133-8d19761ac295))
+    (pin "1" (uuid c6808a9b-f8e0-5487-839a-b37e2f917b8f))
     (instances
       (project "Servo_Driver_A_LDO"
-        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR11") (unit 1)))))
-  (symbol (lib_id "Connector_Generic:Conn_01x04") (at 30.48 99.06 0) (mirror y) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid a2b6dbd8-1c79-4682-8fab-1ab33effe7dc)
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "#PWR11") (unit 1)))))
+  (symbol (lib_id "Connector_Generic:Conn_01x04") (at 30.48 99.06 0) (mirror y) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid a666e9f0-4c4c-5eea-94f8-aca99c9de0b7)
     (property "Reference" "J2" (at 30.48 93.98 0)
       (effects
         (font (size 1.27 1.27))))
@@ -1274,14 +1304,14 @@
     (property "Datasheet" "~" (at 30.48 99.06 0)
       (effects
         (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid fd99b4ee-3a37-41c7-be49-9b22b04a2738))
-    (pin "2" (uuid cde3352c-1a26-4112-a0ee-e8d53bd19339))
-    (pin "3" (uuid 62e2afde-2fc5-4d51-86cf-9cc684122b52))
-    (pin "4" (uuid dfdaba1e-7a78-455c-a96b-32cc4755454e))
+    (pin "1" (uuid 5ecb7bad-e737-5cb9-8929-4b474e1a2fd4))
+    (pin "2" (uuid e261c33c-e081-5325-a4ed-7c09676a26a1))
+    (pin "3" (uuid 8e1920db-1643-5c92-aa6c-d4ee7f55f63f))
+    (pin "4" (uuid 0256c7b9-daf8-5f7f-9f33-fcc662e40fa0))
     (instances
       (project "Servo_Driver_A_LDO"
-        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "J2") (unit 1)))))
-  (symbol (lib_id "power:GND") (at 40.64 96.52 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 5ebfef65-5dcb-479a-88e7-1da87ec02f3e)
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "J2") (unit 1)))))
+  (symbol (lib_id "power:GND") (at 40.64 96.52 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 1aa3b8c1-852c-5e0d-bd8f-b25f06a5f513)
     (property "Reference" "#PWR12" (at 40.64 96.52 90)
       (effects
         (font (size 1.27 1.27)) hide))
@@ -1294,11 +1324,11 @@
     (property "Datasheet" "~" (at 40.64 96.52 90)
       (effects
         (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid cc64439f-3794-4649-ab37-5adf6cddc62b))
+    (pin "1" (uuid 44949dc4-eb67-5cf8-989f-7bbd42fc39c4))
     (instances
       (project "Servo_Driver_A_LDO"
-        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR12") (unit 1)))))
-  (symbol (lib_id "Device:R") (at 50.8 125.73 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid c06a20a7-f603-47bb-a256-99feb1200f87)
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "#PWR12") (unit 1)))))
+  (symbol (lib_id "Device:R") (at 50.8 125.73 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid b2a83bdf-e2f5-5d08-a966-f69795503806)
     (property "Reference" "R1" (at 53.34 124.46 0)
       (effects
         (font (size 1.27 1.27)) (justify left)))
@@ -1311,12 +1341,12 @@
     (property "Datasheet" "~" (at 50.8 125.73 0)
       (effects
         (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid f8754865-f4f4-4870-b601-1ac6630c86fd))
-    (pin "2" (uuid 4f6fc6e9-fade-4184-ad8b-a6ffaeb1d3ca))
+    (pin "1" (uuid a95f5a01-8a88-5d0c-99a8-e847c45c1829))
+    (pin "2" (uuid f3dbb547-e8e3-5dfe-8afb-0f30f35a4c50))
     (instances
       (project "Servo_Driver_A_LDO"
-        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "R1") (unit 1)))))
-  (symbol (lib_id "Device:R") (at 50.8 133.35 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 72ff7448-7a00-4657-8570-50c92cda8aa7)
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "R1") (unit 1)))))
+  (symbol (lib_id "Device:R") (at 50.8 133.35 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid f3e6ee0c-0ae7-5b7b-8955-4ee2c90806df)
     (property "Reference" "R2" (at 48.26 132.08 0)
       (effects
         (font (size 1.27 1.27)) (justify right)))
@@ -1329,12 +1359,12 @@
     (property "Datasheet" "~" (at 50.8 133.35 0)
       (effects
         (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 7c88a2fc-f4f7-4cb0-ad8f-a373fecda5ca))
-    (pin "2" (uuid 5c74fb6b-9fa2-43aa-b8a7-27ff2cb1dae6))
+    (pin "1" (uuid 647c4e51-8417-5175-a0fc-8916877d82cf))
+    (pin "2" (uuid ebdd1175-7a23-5c64-9cef-24d0548a04df))
     (instances
       (project "Servo_Driver_A_LDO"
-        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "R2") (unit 1)))))
-  (symbol (lib_id "Device:C") (at 58.42 133.35 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid dc9fa084-c493-4f1d-a110-09f2348a5d73)
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "R2") (unit 1)))))
+  (symbol (lib_id "Device:C") (at 58.42 133.35 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 595aa02b-c309-538b-ab56-4cf4d5cc63f4)
     (property "Reference" "C2" (at 60.96 132.08 0)
       (effects
         (font (size 1.27 1.27)) (justify left)))
@@ -1347,12 +1377,12 @@
     (property "Datasheet" "~" (at 58.42 133.35 0)
       (effects
         (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid cafa1b44-1eac-4e04-a524-8448b658f138))
-    (pin "2" (uuid 831492d3-786d-4789-b325-f950367222d1))
+    (pin "1" (uuid 35124ef2-12db-50b3-aa85-a9b30d78fc61))
+    (pin "2" (uuid 47368757-039b-5cee-90bd-1c3e74f8bb5c))
     (instances
       (project "Servo_Driver_A_LDO"
-        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "C2") (unit 1)))))
-  (symbol (lib_id "power:+5V") (at 50.8 121.92 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 60e6e205-d75f-4a17-bb63-279beb5ca035)
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "C2") (unit 1)))))
+  (symbol (lib_id "power:+5V") (at 50.8 121.92 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 77669645-0a0f-5de6-bb86-ea184e4031e5)
     (property "Reference" "#PWR13" (at 50.8 121.92 0)
       (effects
         (font (size 1.27 1.27)) hide))
@@ -1365,11 +1395,11 @@
     (property "Datasheet" "~" (at 50.8 121.92 0)
       (effects
         (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid f36f88b4-6200-41bb-9cc3-bdcfcd21f5e7))
+    (pin "1" (uuid cba10a29-7b0d-525d-ab79-c099e325009a))
     (instances
       (project "Servo_Driver_A_LDO"
-        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR13") (unit 1)))))
-  (symbol (lib_id "power:GND") (at 50.8 137.16 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 6f42fe4e-487f-4787-b51d-6ee0c067543a)
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "#PWR13") (unit 1)))))
+  (symbol (lib_id "power:GND") (at 50.8 137.16 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid e4f52b06-61d4-5017-9742-295651f9ad90)
     (property "Reference" "#PWR14" (at 50.8 137.16 0)
       (effects
         (font (size 1.27 1.27)) hide))
@@ -1382,11 +1412,11 @@
     (property "Datasheet" "~" (at 50.8 137.16 0)
       (effects
         (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 2497a72d-8f9c-40df-ae4b-9f0cc3062626))
+    (pin "1" (uuid 90941850-369b-5b14-8490-107bc6d11800))
     (instances
       (project "Servo_Driver_A_LDO"
-        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR14") (unit 1)))))
-  (symbol (lib_id "power:GND") (at 58.42 137.16 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 012422ba-8e88-4066-a328-b8e2a1bab00d)
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "#PWR14") (unit 1)))))
+  (symbol (lib_id "power:GND") (at 58.42 137.16 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid b09bcd58-d118-51eb-87b3-6242b03442f9)
     (property "Reference" "#PWR15" (at 58.42 137.16 0)
       (effects
         (font (size 1.27 1.27)) hide))
@@ -1399,11 +1429,11 @@
     (property "Datasheet" "~" (at 58.42 137.16 0)
       (effects
         (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 730c45f7-9a31-4eb7-8de8-7142398fe3aa))
+    (pin "1" (uuid 967f072d-e9c5-5dc8-ba9d-30fac52f6fc8))
     (instances
       (project "Servo_Driver_A_LDO"
-        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR15") (unit 1)))))
-  (symbol (lib_id "Amplifier_Operational:LM324") (at 111.76 96.52 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid db5055dc-87d4-4070-809d-66331393df72)
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "#PWR15") (unit 1)))))
+  (symbol (lib_id "Amplifier_Operational:LM324") (at 111.76 96.52 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid a1ce0492-61e2-54fe-96f2-2ae96493a06e)
     (property "Reference" "U2" (at 113.03 87.63 0)
       (effects
         (font (size 1.27 1.27)) (justify left)))
@@ -1416,13 +1446,13 @@
     (property "Datasheet" "~" (at 111.76 96.52 0)
       (effects
         (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 89c1bca0-e191-49b9-b021-8a9d041cb334))
-    (pin "2" (uuid 0af34ddf-742b-447b-9b00-04214f24f7ae))
-    (pin "3" (uuid 241164dd-6927-4687-bcf2-40afbd0d1360))
+    (pin "1" (uuid 643830bb-c60c-54ec-82e6-d9302ed4b007))
+    (pin "2" (uuid 5d8515b0-fa19-5e37-85b8-eb242585ad29))
+    (pin "3" (uuid 50c45044-7ca6-5702-859a-d4455f155b20))
     (instances
       (project "Servo_Driver_A_LDO"
-        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "U2") (unit 1)))))
-  (symbol (lib_id "Device:R") (at 91.44 97.79 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 6fd1ca67-60ad-440b-a9a6-9e39dabb746a)
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "U2") (unit 1)))))
+  (symbol (lib_id "Device:R") (at 91.44 97.79 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 390135dd-a2b0-5e43-af72-fef4278db100)
     (property "Reference" "R3" (at 88.9 96.52 0)
       (effects
         (font (size 1.27 1.27)) (justify right)))
@@ -1435,12 +1465,12 @@
     (property "Datasheet" "~" (at 91.44 97.79 0)
       (effects
         (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid bc5653f4-5c68-4364-a007-aab89c2933c0))
-    (pin "2" (uuid c3f9e850-7b4c-4502-b3da-3f0ddf63402e))
+    (pin "1" (uuid 2600d783-a4c2-5822-b381-44973c8b93b3))
+    (pin "2" (uuid a8473ae7-62b0-5560-b898-af362c37dfd3))
     (instances
       (project "Servo_Driver_A_LDO"
-        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "R3") (unit 1)))))
-  (symbol (lib_id "power:GND") (at 91.44 101.6 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 78ccb647-776f-437d-97dd-f5894325a8d6)
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "R3") (unit 1)))))
+  (symbol (lib_id "power:GND") (at 91.44 101.6 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 01ca9bd2-68d6-5091-bfc4-b566f5f7d1ab)
     (property "Reference" "#PWR16" (at 91.44 101.6 0)
       (effects
         (font (size 1.27 1.27)) hide))
@@ -1453,11 +1483,11 @@
     (property "Datasheet" "~" (at 91.44 101.6 0)
       (effects
         (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid f1592372-ecb1-4cc9-b983-7df2d740642f))
+    (pin "1" (uuid c3c0971e-5ffa-5783-92eb-754bf6f0e17f))
     (instances
       (project "Servo_Driver_A_LDO"
-        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR16") (unit 1)))))
-  (symbol (lib_id "Amplifier_Operational:LM324") (at 111.76 116.84 0) (unit 2) (in_bom yes) (on_board yes) (dnp no) (uuid 5859b6f2-5790-4d70-b0f4-d8e579b180f2)
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "#PWR16") (unit 1)))))
+  (symbol (lib_id "Amplifier_Operational:LM324") (at 111.76 116.84 0) (unit 2) (in_bom yes) (on_board yes) (dnp no) (uuid db7c79c7-e6bc-5069-a437-d7859dc653ab)
     (property "Reference" "U2" (at 113.03 107.95 0)
       (effects
         (font (size 1.27 1.27)) (justify left)))
@@ -1470,13 +1500,13 @@
     (property "Datasheet" "~" (at 111.76 116.84 0)
       (effects
         (font (size 1.27 1.27)) hide))
-    (pin "5" (uuid 72a3d952-97e7-4e43-a21d-95f78e93f243))
-    (pin "6" (uuid ecb983a2-dca0-46a8-bd52-d99e0d4b6ca3))
-    (pin "7" (uuid 0abeaff9-6c14-45c9-a514-79c6f46e2af2))
+    (pin "5" (uuid d74b9291-5cae-55cc-a8b3-d24606953abe))
+    (pin "6" (uuid 3f97b1e6-d886-5833-8fcb-0b075df7b014))
+    (pin "7" (uuid 9c5e4741-356e-5ad1-8c39-bf5ff522a38e))
     (instances
       (project "Servo_Driver_A_LDO"
-        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "U2") (unit 2)))))
-  (symbol (lib_id "Device:R") (at 91.44 118.11 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid e3eaab7a-fd90-429d-aaa4-d2b18d983b84)
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "U2") (unit 2)))))
+  (symbol (lib_id "Device:R") (at 91.44 118.11 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 707b6a01-ec8b-5010-97a0-2d0ddd974d2e)
     (property "Reference" "R4" (at 88.9 116.84 0)
       (effects
         (font (size 1.27 1.27)) (justify right)))
@@ -1489,12 +1519,12 @@
     (property "Datasheet" "~" (at 91.44 118.11 0)
       (effects
         (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid b694cfd0-77ce-4877-981a-a44e32375eed))
-    (pin "2" (uuid e80a4e0d-6152-4a29-9fa3-48fab7d4825b))
+    (pin "1" (uuid 20381163-64fc-5a2c-9293-76501ecaf650))
+    (pin "2" (uuid 4d19a245-3280-5dc5-813e-3c590e6d4b94))
     (instances
       (project "Servo_Driver_A_LDO"
-        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "R4") (unit 1)))))
-  (symbol (lib_id "power:GND") (at 91.44 121.92 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 35e260c1-f333-44d6-b807-24f3890c4754)
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "R4") (unit 1)))))
+  (symbol (lib_id "power:GND") (at 91.44 121.92 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 85bd3ed8-7b72-5da2-bae9-fedfaeeb30f6)
     (property "Reference" "#PWR17" (at 91.44 121.92 0)
       (effects
         (font (size 1.27 1.27)) hide))
@@ -1507,11 +1537,11 @@
     (property "Datasheet" "~" (at 91.44 121.92 0)
       (effects
         (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid b40a3d05-17a8-4533-947d-97678ca32cb9))
+    (pin "1" (uuid 6e55cb25-ffab-5e4f-934d-a7d2493c3bb0))
     (instances
       (project "Servo_Driver_A_LDO"
-        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR17") (unit 1)))))
-  (symbol (lib_id "Amplifier_Operational:LM324") (at 111.76 137.16 0) (unit 3) (in_bom yes) (on_board yes) (dnp no) (uuid b8c969d4-5f6c-4c82-b689-6b53b6e5dc7d)
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "#PWR17") (unit 1)))))
+  (symbol (lib_id "Amplifier_Operational:LM324") (at 111.76 137.16 0) (unit 3) (in_bom yes) (on_board yes) (dnp no) (uuid 632371f4-d4b3-55a3-afa6-f20ade0bef28)
     (property "Reference" "U2" (at 113.03 128.27 0)
       (effects
         (font (size 1.27 1.27)) (justify left)))
@@ -1524,13 +1554,13 @@
     (property "Datasheet" "~" (at 111.76 137.16 0)
       (effects
         (font (size 1.27 1.27)) hide))
-    (pin "10" (uuid 63526874-c99b-423d-b0cb-97457b7b3452))
-    (pin "8" (uuid 9ec00c58-ec03-4f45-bb11-a51e72f65b5e))
-    (pin "9" (uuid a343710a-49c9-4cbd-b43a-8deed2450991))
+    (pin "10" (uuid d94553bb-13d4-5f0a-8ebc-0504b7bd09be))
+    (pin "8" (uuid a1e1201c-d59b-517b-9ad5-79ea5dcfbb61))
+    (pin "9" (uuid 16064f62-2bf2-596f-ad56-73f0ceaafd31))
     (instances
       (project "Servo_Driver_A_LDO"
-        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "U2") (unit 3)))))
-  (symbol (lib_id "Device:R") (at 91.44 138.43 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 80bb034f-37e0-411b-87b1-df70d5189d21)
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "U2") (unit 3)))))
+  (symbol (lib_id "Device:R") (at 91.44 138.43 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid e621bf91-325c-50c7-9faa-060a958473d6)
     (property "Reference" "R5" (at 88.9 137.16 0)
       (effects
         (font (size 1.27 1.27)) (justify right)))
@@ -1543,12 +1573,12 @@
     (property "Datasheet" "~" (at 91.44 138.43 0)
       (effects
         (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 23828c02-d065-4c84-b04d-2964ff4e02d4))
-    (pin "2" (uuid dd01443b-a3f1-42ba-a275-42f60b8a04d3))
+    (pin "1" (uuid 8eb49d66-97c8-546d-ac76-2eaa19f2b270))
+    (pin "2" (uuid 4143191c-0e4c-506e-aa5c-6bd12d22438d))
     (instances
       (project "Servo_Driver_A_LDO"
-        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "R5") (unit 1)))))
-  (symbol (lib_id "power:GND") (at 91.44 142.24 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid ff9b75a6-0067-4ee8-84a2-9e8df8c7b11a)
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "R5") (unit 1)))))
+  (symbol (lib_id "power:GND") (at 91.44 142.24 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 39a3f23d-fa85-5b51-8a04-76dfc4268050)
     (property "Reference" "#PWR18" (at 91.44 142.24 0)
       (effects
         (font (size 1.27 1.27)) hide))
@@ -1561,11 +1591,11 @@
     (property "Datasheet" "~" (at 91.44 142.24 0)
       (effects
         (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 8c31cfdf-ef58-430d-8a97-1ce102b36873))
+    (pin "1" (uuid 908bbd40-5e7d-5b74-a3e0-1b573c4cb591))
     (instances
       (project "Servo_Driver_A_LDO"
-        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR18") (unit 1)))))
-  (symbol (lib_id "Connector_Generic:Conn_01x03") (at 170.18 96.52 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 764ff9fb-b9a9-4e9e-8a7c-4ef885f78fb7)
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "#PWR18") (unit 1)))))
+  (symbol (lib_id "Connector_Generic:Conn_01x03") (at 170.18 96.52 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid c96fa9ef-175b-54d6-8bfc-2867b6f4e5ba)
     (property "Reference" "J3" (at 172.72 93.98 0)
       (effects
         (font (size 1.27 1.27)) (justify left)))
@@ -1578,13 +1608,13 @@
     (property "Datasheet" "~" (at 170.18 96.52 0)
       (effects
         (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 064c4d4a-502c-41c4-bd1e-586918c68762))
-    (pin "2" (uuid 10f71535-e18c-443f-ab79-85832f64f992))
-    (pin "3" (uuid 152ee046-56e3-45f3-888b-795f5237251f))
+    (pin "1" (uuid 7589876e-5cf3-5a1b-9518-1318b3978b0f))
+    (pin "2" (uuid f6e36ebe-a4f0-5916-9b33-c2e9853ac1b3))
+    (pin "3" (uuid 3f6be7c6-49be-5372-8135-4faed57699c2))
     (instances
       (project "Servo_Driver_A_LDO"
-        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "J3") (unit 1)))))
-  (symbol (lib_id "power:GND") (at 160.02 93.98 270) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid b767cd85-f011-42df-9428-9cb7f40fce34)
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "J3") (unit 1)))))
+  (symbol (lib_id "power:GND") (at 160.02 93.98 270) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 26d07f7f-d1e2-525f-ad0b-708f9fda1956)
     (property "Reference" "#PWR19" (at 160.02 93.98 90)
       (effects
         (font (size 1.27 1.27)) hide))
@@ -1597,11 +1627,11 @@
     (property "Datasheet" "~" (at 160.02 93.98 90)
       (effects
         (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 2cc7b4b5-8411-4ab2-8d86-e41741f78060))
+    (pin "1" (uuid 982972e5-8fcb-5a8a-9c60-2e49d193b456))
     (instances
       (project "Servo_Driver_A_LDO"
-        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR19") (unit 1)))))
-  (symbol (lib_id "power:+5V") (at 160.02 96.52 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid e172ef17-b716-4b0c-85a4-55aa4e71e100)
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "#PWR19") (unit 1)))))
+  (symbol (lib_id "power:+5V") (at 160.02 96.52 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 612c2813-6495-5883-a4f3-a9cc31259026)
     (property "Reference" "#PWR20" (at 160.02 96.52 90)
       (effects
         (font (size 1.27 1.27)) hide))
@@ -1614,11 +1644,11 @@
     (property "Datasheet" "~" (at 160.02 96.52 90)
       (effects
         (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 7e118509-dd9c-4ca3-8472-5c408f7e6650))
+    (pin "1" (uuid 36d95230-3765-5735-bfbe-72ca221baada))
     (instances
       (project "Servo_Driver_A_LDO"
-        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR20") (unit 1)))))
-  (symbol (lib_id "Connector_Generic:Conn_01x03") (at 170.18 116.84 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid ced35401-7531-4e8e-ab5b-dde35bee1a4c)
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "#PWR20") (unit 1)))))
+  (symbol (lib_id "Connector_Generic:Conn_01x03") (at 170.18 116.84 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 7ddc947d-9f1c-5111-9c19-0cb2aedc2271)
     (property "Reference" "J4" (at 172.72 114.3 0)
       (effects
         (font (size 1.27 1.27)) (justify left)))
@@ -1631,13 +1661,13 @@
     (property "Datasheet" "~" (at 170.18 116.84 0)
       (effects
         (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid b4b43681-7f2c-4942-97bb-d226bce310d8))
-    (pin "2" (uuid f15afa0d-7e33-48eb-b964-9b4590c08d23))
-    (pin "3" (uuid 432c260e-fae1-4e67-b2bc-963f41286553))
+    (pin "1" (uuid cca2ed19-c439-5aaf-a19f-c6455a76186f))
+    (pin "2" (uuid d22bcd66-e319-5aee-b60b-28b260574157))
+    (pin "3" (uuid c588b7fa-db1d-5260-95d3-09d05a3d5d34))
     (instances
       (project "Servo_Driver_A_LDO"
-        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "J4") (unit 1)))))
-  (symbol (lib_id "power:GND") (at 160.02 114.3 270) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 02ff0dbd-fdec-43fe-8211-f95b72dcaccf)
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "J4") (unit 1)))))
+  (symbol (lib_id "power:GND") (at 160.02 114.3 270) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid e6843318-a687-5630-9818-aee793e2e45d)
     (property "Reference" "#PWR21" (at 160.02 114.3 90)
       (effects
         (font (size 1.27 1.27)) hide))
@@ -1650,11 +1680,11 @@
     (property "Datasheet" "~" (at 160.02 114.3 90)
       (effects
         (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 84ed52cb-375a-4bd3-81a1-75fb9caa44d2))
+    (pin "1" (uuid d68a7384-5d1a-5290-a7ce-2171007491f6))
     (instances
       (project "Servo_Driver_A_LDO"
-        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR21") (unit 1)))))
-  (symbol (lib_id "power:+5V") (at 160.02 116.84 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid c172d28a-2b00-4813-a853-eb8369744b75)
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "#PWR21") (unit 1)))))
+  (symbol (lib_id "power:+5V") (at 160.02 116.84 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid a92bf0b1-ee39-5dcb-ab08-1f62b50cc042)
     (property "Reference" "#PWR22" (at 160.02 116.84 90)
       (effects
         (font (size 1.27 1.27)) hide))
@@ -1667,11 +1697,11 @@
     (property "Datasheet" "~" (at 160.02 116.84 90)
       (effects
         (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 12356751-8372-4536-805f-000432f740bb))
+    (pin "1" (uuid 0541d0b3-1133-5c33-9209-b5b0df657152))
     (instances
       (project "Servo_Driver_A_LDO"
-        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR22") (unit 1)))))
-  (symbol (lib_id "Connector_Generic:Conn_01x03") (at 170.18 137.16 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 787fd68d-63b1-40ca-981d-8ffa728f02c7)
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "#PWR22") (unit 1)))))
+  (symbol (lib_id "Connector_Generic:Conn_01x03") (at 170.18 137.16 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid f315a191-ec72-5b77-807e-d72725a350c5)
     (property "Reference" "J5" (at 172.72 134.62 0)
       (effects
         (font (size 1.27 1.27)) (justify left)))
@@ -1684,13 +1714,13 @@
     (property "Datasheet" "~" (at 170.18 137.16 0)
       (effects
         (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 2773700b-a591-4aa8-b852-c712041658f9))
-    (pin "2" (uuid dfd0d723-aecc-42f4-909d-8de7c70c3c9d))
-    (pin "3" (uuid f4d052b8-5604-45b5-8986-146c00472b82))
+    (pin "1" (uuid 15430541-05ff-506f-86bb-c2a75ef92cff))
+    (pin "2" (uuid 7caaf8c1-c163-5d43-af53-94c6dacd3074))
+    (pin "3" (uuid 0225bdb0-1455-5cc9-bbcd-125f915c0ca1))
     (instances
       (project "Servo_Driver_A_LDO"
-        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "J5") (unit 1)))))
-  (symbol (lib_id "power:GND") (at 160.02 134.62 270) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid b0cf4a83-d50a-4d5f-b575-7a15d060ae5b)
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "J5") (unit 1)))))
+  (symbol (lib_id "power:GND") (at 160.02 134.62 270) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid bcfbd9c1-c32e-5a2f-94dd-de6247421927)
     (property "Reference" "#PWR23" (at 160.02 134.62 90)
       (effects
         (font (size 1.27 1.27)) hide))
@@ -1703,11 +1733,11 @@
     (property "Datasheet" "~" (at 160.02 134.62 90)
       (effects
         (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid b9fa1f31-5671-45e5-894e-57c5364fbb87))
+    (pin "1" (uuid c9825bd6-ee46-5434-89bb-2e3f21d42736))
     (instances
       (project "Servo_Driver_A_LDO"
-        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR23") (unit 1)))))
-  (symbol (lib_id "power:+5V") (at 160.02 137.16 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid ded8fa80-5634-4a77-a1c6-36147ee3fc9f)
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "#PWR23") (unit 1)))))
+  (symbol (lib_id "power:+5V") (at 160.02 137.16 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 40797130-3944-5062-9082-f9659a3c3655)
     (property "Reference" "#PWR24" (at 160.02 137.16 90)
       (effects
         (font (size 1.27 1.27)) hide))
@@ -1720,11 +1750,11 @@
     (property "Datasheet" "~" (at 160.02 137.16 90)
       (effects
         (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 0c6b8dde-9589-40a6-8ce9-34851bc86570))
+    (pin "1" (uuid c1ebca03-6223-5bfe-a494-94f1fa8ef17d))
     (instances
       (project "Servo_Driver_A_LDO"
-        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR24") (unit 1)))))
-  (symbol (lib_id "Amplifier_Operational:LM324") (at 111.76 157.48 0) (unit 4) (in_bom yes) (on_board yes) (dnp no) (uuid 5d538af8-93d2-479a-9279-548f199a725f)
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "#PWR24") (unit 1)))))
+  (symbol (lib_id "Amplifier_Operational:LM324") (at 111.76 157.48 0) (unit 4) (in_bom yes) (on_board yes) (dnp no) (uuid c08acc10-f9b6-5996-aadb-79a44375442c)
     (property "Reference" "U2" (at 113.03 148.59 0)
       (effects
         (font (size 1.27 1.27)) (justify left)))
@@ -1737,13 +1767,13 @@
     (property "Datasheet" "~" (at 111.76 157.48 0)
       (effects
         (font (size 1.27 1.27)) hide))
-    (pin "12" (uuid 4655997d-fd0a-4e29-ba3c-20c6c4af3b35))
-    (pin "13" (uuid 9fdfd3e6-db4a-4fa5-ab61-6da1889f8460))
-    (pin "14" (uuid dd40dbda-06c8-4a62-a989-1b8ee59c2d0c))
+    (pin "12" (uuid e183fcb1-dffe-512d-9563-24e870c80e8f))
+    (pin "13" (uuid c382d1af-105e-559f-ae3a-a03962884340))
+    (pin "14" (uuid c9f3e449-f13d-524f-ad38-b5541bb763f1))
     (instances
       (project "Servo_Driver_A_LDO"
-        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "U2") (unit 4)))))
-  (symbol (lib_id "power:GND") (at 99.06 154.94 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid a3e9a12f-fa8e-4189-9ce3-d6014273cce4)
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "U2") (unit 4)))))
+  (symbol (lib_id "power:GND") (at 99.06 154.94 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 3f0f6f88-2a6e-5ed1-bfbb-3fc7a74506bb)
     (property "Reference" "#PWR25" (at 99.06 154.94 0)
       (effects
         (font (size 1.27 1.27)) hide))
@@ -1756,11 +1786,11 @@
     (property "Datasheet" "~" (at 99.06 154.94 0)
       (effects
         (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid a92c7fb0-53dd-48fe-892a-b079009a52e8))
+    (pin "1" (uuid cded3b91-1dc8-5e48-a0cd-d6d5ad56d937))
     (instances
       (project "Servo_Driver_A_LDO"
-        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR25") (unit 1)))))
-  (symbol (lib_id "Amplifier_Operational:LM324") (at 139.7 157.48 0) (unit 5) (in_bom yes) (on_board yes) (dnp no) (uuid 71112dda-77bf-4e02-abb6-b0a291620018)
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "#PWR25") (unit 1)))))
+  (symbol (lib_id "Amplifier_Operational:LM324") (at 139.7 157.48 0) (unit 5) (in_bom yes) (on_board yes) (dnp no) (uuid 995bad24-abf0-5ecf-9ffb-cc9d0ec4b531)
     (property "Reference" "U2" (at 140.97 156.21 0)
       (effects
         (font (size 1.27 1.27)) (justify left)))
@@ -1773,12 +1803,12 @@
     (property "Datasheet" "~" (at 139.7 157.48 0)
       (effects
         (font (size 1.27 1.27)) hide))
-    (pin "11" (uuid 7cad1f7f-5da6-43c9-8706-fda82fc49be6))
-    (pin "4" (uuid 0a15ab53-a82c-49f0-baaf-5ab8f3592184))
+    (pin "11" (uuid 74865cca-b5f4-5675-8250-b604da8bc48b))
+    (pin "4" (uuid 446fa681-588e-52a8-bf33-410c35301b94))
     (instances
       (project "Servo_Driver_A_LDO"
-        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "U2") (unit 5)))))
-  (symbol (lib_id "power:+5V") (at 137.16 149.86 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 254cc058-64d2-4e99-9343-efd8fa935112)
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "U2") (unit 5)))))
+  (symbol (lib_id "power:+5V") (at 137.16 149.86 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid b9e740e7-c4ed-5ac5-ae32-ca838c6ef111)
     (property "Reference" "#PWR26" (at 137.16 149.86 0)
       (effects
         (font (size 1.27 1.27)) hide))
@@ -1791,11 +1821,11 @@
     (property "Datasheet" "~" (at 137.16 149.86 0)
       (effects
         (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid ef2cac1e-a617-43f1-9055-4ee792607980))
+    (pin "1" (uuid 9ecbb441-4094-51a2-83b9-376762da9830))
     (instances
       (project "Servo_Driver_A_LDO"
-        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR26") (unit 1)))))
-  (symbol (lib_id "power:GND") (at 137.16 165.1 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid ecb5abf0-6074-4518-912d-5c10d207d9eb)
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "#PWR26") (unit 1)))))
+  (symbol (lib_id "power:GND") (at 137.16 165.1 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 17738c13-d1fc-5c87-8df6-700bf649e262)
     (property "Reference" "#PWR27" (at 137.16 165.1 0)
       (effects
         (font (size 1.27 1.27)) hide))
@@ -1808,11 +1838,11 @@
     (property "Datasheet" "~" (at 137.16 165.1 0)
       (effects
         (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 74d23953-7e92-46a1-aa1a-ae06a6f74fd6))
+    (pin "1" (uuid 6bf35491-a030-5132-9509-a3c7922cb596))
     (instances
       (project "Servo_Driver_A_LDO"
-        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR27") (unit 1)))))
-  (symbol (lib_id "Device:C") (at 152.4 157.48 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid f0cba806-a5cc-4856-8f6b-1f7b4b4fd9f7)
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "#PWR27") (unit 1)))))
+  (symbol (lib_id "Device:C") (at 152.4 157.48 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid d373138d-58f2-5b99-9ab9-b7c4a92c9fa3)
     (property "Reference" "C3" (at 154.94 156.21 0)
       (effects
         (font (size 1.27 1.27)) (justify left)))
@@ -1825,12 +1855,12 @@
     (property "Datasheet" "~" (at 152.4 157.48 0)
       (effects
         (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 93582bea-69f3-446f-80a8-eab7f21cf04e))
-    (pin "2" (uuid 36421917-1a42-4d11-ba90-d9851dc2e15a))
+    (pin "1" (uuid 83ea7fc6-f36a-5ac9-9d34-8a5e809f68e4))
+    (pin "2" (uuid ad688977-648e-5e09-af07-0f4a581ba1bb))
     (instances
       (project "Servo_Driver_A_LDO"
-        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "C3") (unit 1)))))
-  (symbol (lib_id "power:+5V") (at 152.4 153.67 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 19559bc9-ae05-4ec9-8301-c1e2b74a1d94)
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "C3") (unit 1)))))
+  (symbol (lib_id "power:+5V") (at 152.4 153.67 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid ef1ff5c9-bf39-5c45-8945-6e2123109103)
     (property "Reference" "#PWR28" (at 152.4 153.67 0)
       (effects
         (font (size 1.27 1.27)) hide))
@@ -1843,11 +1873,11 @@
     (property "Datasheet" "~" (at 152.4 153.67 0)
       (effects
         (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid efb64cde-4004-4362-a61b-692496e660ce))
+    (pin "1" (uuid 70375174-ec2e-54e1-aea3-584ff2614ba3))
     (instances
       (project "Servo_Driver_A_LDO"
-        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR28") (unit 1)))))
-  (symbol (lib_id "power:GND") (at 152.4 161.29 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid b52c396c-53b9-435f-8161-654675555602)
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "#PWR28") (unit 1)))))
+  (symbol (lib_id "power:GND") (at 152.4 161.29 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 3d287353-bc5c-50e0-8386-f188158cc123)
     (property "Reference" "#PWR29" (at 152.4 161.29 0)
       (effects
         (font (size 1.27 1.27)) hide))
@@ -1860,9 +1890,73 @@
     (property "Datasheet" "~" (at 152.4 161.29 0)
       (effects
         (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid 2db8ba5a-1f40-4c6a-b2c7-93f748688c19))
+    (pin "1" (uuid 9e7ea085-2bb3-57b1-b0a8-dc72e7a879af))
     (instances
       (project "Servo_Driver_A_LDO"
-        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR29") (unit 1)))))
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "#PWR29") (unit 1)))))
+  (symbol (lib_id "Mechanical:MountingHole") (at 200.66 40.64 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid a63c09b3-328b-558e-bada-7cc69ddbd51e)
+    (property "Reference" "H1" (at 200.66 35.56 0)
+      (effects
+        (font (size 1.27 1.27))))
+    (property "Value" "M3" (at 200.66 45.72 0)
+      (effects
+        (font (size 1.27 1.27))))
+    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3" (at 200.66 40.64 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 200.66 40.64 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "H1") (unit 1)))))
+  (symbol (lib_id "Mechanical:MountingHole") (at 213.36 40.64 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 0d2bdcdf-24b4-59db-ab55-7179d0187eb0)
+    (property "Reference" "H2" (at 213.36 35.56 0)
+      (effects
+        (font (size 1.27 1.27))))
+    (property "Value" "M3" (at 213.36 45.72 0)
+      (effects
+        (font (size 1.27 1.27))))
+    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3" (at 213.36 40.64 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 213.36 40.64 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "H2") (unit 1)))))
+  (symbol (lib_id "Mechanical:MountingHole") (at 226.06 40.64 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid aafd35ba-856d-544a-815a-7340346cd180)
+    (property "Reference" "H3" (at 226.06 35.56 0)
+      (effects
+        (font (size 1.27 1.27))))
+    (property "Value" "M3" (at 226.06 45.72 0)
+      (effects
+        (font (size 1.27 1.27))))
+    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3" (at 226.06 40.64 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 226.06 40.64 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "H3") (unit 1)))))
+  (symbol (lib_id "Mechanical:MountingHole") (at 238.76 40.64 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 0bc7b859-13d8-5bf1-b8d1-63573066d06e)
+    (property "Reference" "H4" (at 238.76 35.56 0)
+      (effects
+        (font (size 1.27 1.27))))
+    (property "Value" "M3" (at 238.76 45.72 0)
+      (effects
+        (font (size 1.27 1.27))))
+    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3" (at 238.76 40.64 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 238.76 40.64 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/6ac733f1-b901-560a-a35a-4220efa78324" (reference "H4") (unit 1)))))
   (sheet_instances
     (path "/" (page "1"))))
