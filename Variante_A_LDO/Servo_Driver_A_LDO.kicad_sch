@@ -1,0 +1,1868 @@
+(kicad_sch (version 20230121) (generator eeschema) (uuid 1aff416e-ae8b-4ee8-b4c2-09e067502dcc) (paper "A4")
+  (title_block (title "Driver 3 servo - Variante A (LDO)") (date "2026-10-18") (rev "1.0") (company "") (comment 1 "Batteria LiPo 2S 7.4V -> 5V con regolatore lineare LM7805") (comment 2 "Level shifter PWM 3.3V -> 5V con LM324"))
+  (lib_symbols
+    (symbol "Connector_Generic:Conn_01x02"
+      (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
+      (property "Reference" "J" (at 0 2.54 0)
+        (effects
+          (font (size 1.27 1.27))))
+      (property "Value" "Conn_01x02" (at 0 -5.08 0)
+        (effects
+          (font (size 1.27 1.27))))
+      (property "Footprint" "" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "connector" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "Connector*:*_1x??_*" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (symbol "Conn_01x02_1_1"
+        (rectangle (start -1.27 -2.413) (end 0 -2.667)
+          (stroke (width 0.1524) (type default))
+          (fill (type none)))
+        (rectangle (start -1.27 0.127) (end 0 -0.127)
+          (stroke (width 0.1524) (type default))
+          (fill (type none)))
+        (rectangle (start -1.27 1.27) (end 1.27 -3.81)
+          (stroke (width 0.254) (type default))
+          (fill (type background)))
+        (pin passive line (at -5.08 0 0) (length 3.81)
+          (name "Pin_1"
+            (effects
+              (font (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font (size 1.27 1.27)))))
+        (pin passive line (at -5.08 -2.54 0) (length 3.81)
+          (name "Pin_2"
+            (effects
+              (font (size 1.27 1.27))))
+          (number "2"
+            (effects
+              (font (size 1.27 1.27)))))))
+    (symbol "power:+BATT" (power)
+      (pin_names (offset 0)) (in_bom yes) (on_board yes)
+      (property "Reference" "#PWR" (at 0 -3.81 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "Value" "+BATT" (at 0 3.556 0)
+        (effects
+          (font (size 1.27 1.27))))
+      (property "Footprint" "" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "global power battery" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Power symbol creates a global label with name \"+BATT\"" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (symbol "+BATT_0_1"
+        (polyline
+          (pts (xy -0.762 1.27) (xy 0 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 0) (xy 0 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 2.54) (xy 0.762 1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "+BATT_1_1"
+        (pin power_in line (at 0 0 90) (length 0) hide
+          (name "+BATT"
+            (effects
+              (font (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font (size 1.27 1.27)))))))
+    (symbol "Device:C_Polarized" (pin_numbers hide)
+      (pin_names (offset 0.254)) (in_bom yes) (on_board yes)
+      (property "Reference" "C" (at 0.635 2.54 0)
+        (effects
+          (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "C_Polarized" (at 0.635 -2.54 0)
+        (effects
+          (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" "" (at 0.9652 -3.81 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "cap capacitor" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Polarized capacitor" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "CP_*" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (symbol "C_Polarized_0_1"
+        (rectangle (start -2.286 0.508) (end 2.286 1.016)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy -1.778 2.286) (xy -0.762 2.286))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy -1.27 2.794) (xy -1.27 1.778))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (rectangle (start 2.286 -0.508) (end -2.286 -1.016)
+          (stroke (width 0) (type default))
+          (fill (type outline))))
+      (symbol "C_Polarized_1_1"
+        (pin passive line (at 0 3.81 270) (length 2.794)
+          (name "~"
+            (effects
+              (font (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font (size 1.27 1.27)))))
+        (pin passive line (at 0 -3.81 90) (length 2.794)
+          (name "~"
+            (effects
+              (font (size 1.27 1.27))))
+          (number "2"
+            (effects
+              (font (size 1.27 1.27)))))))
+    (symbol "power:GND" (power)
+      (pin_names (offset 0)) (in_bom yes) (on_board yes)
+      (property "Reference" "#PWR" (at 0 -6.35 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "Value" "GND" (at 0 -3.81 0)
+        (effects
+          (font (size 1.27 1.27))))
+      (property "Footprint" "" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "global power" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Power symbol creates a global label with name \"GND\" , ground" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (symbol "GND_0_1"
+        (polyline
+          (pts (xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "GND_1_1"
+        (pin power_in line (at 0 0 270) (length 0) hide
+          (name "GND"
+            (effects
+              (font (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font (size 1.27 1.27)))))))
+    (symbol "power:PWR_FLAG" (power) (pin_numbers hide)
+      (pin_names (offset 0) hide) (in_bom yes) (on_board yes)
+      (property "Reference" "#FLG" (at 0 1.905 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "Value" "PWR_FLAG" (at 0 3.81 0)
+        (effects
+          (font (size 1.27 1.27))))
+      (property "Footprint" "" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "flag power" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Special symbol for telling ERC where power comes from" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (symbol "PWR_FLAG_0_0"
+        (pin power_out line (at 0 0 90) (length 0)
+          (name "pwr"
+            (effects
+              (font (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font (size 1.27 1.27))))))
+      (symbol "PWR_FLAG_0_1"
+        (polyline
+          (pts (xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27))
+          (stroke (width 0) (type default))
+          (fill (type none)))))
+    (symbol "Regulator_Linear:LM7805_TO220"
+      (pin_names (offset 0.254)) (in_bom yes) (on_board yes)
+      (property "Reference" "U" (at -3.81 3.175 0)
+        (effects
+          (font (size 1.27 1.27))))
+      (property "Value" "LM7805_TO220" (at 0 3.175 0)
+        (effects
+          (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical" (at 0 5.715 0)
+        (effects
+          (font (size 1.27 1.27) italic) hide))
+      (property "Datasheet" "https://www.onsemi.cn/PowerSolutions/document/MC7800-D.PDF" (at 0 -1.27 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "Voltage Regulator 1A Positive" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Positive 1A 35V Linear Regulator, Fixed Output 5V, TO-220" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "TO?220*" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (symbol "LM7805_TO220_0_1"
+        (rectangle (start -5.08 1.905) (end 5.08 -5.08)
+          (stroke (width 0.254) (type default))
+          (fill (type background))))
+      (symbol "LM7805_TO220_1_1"
+        (pin power_in line (at -7.62 0 0) (length 2.54)
+          (name "VI"
+            (effects
+              (font (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font (size 1.27 1.27)))))
+        (pin power_in line (at 0 -7.62 90) (length 2.54)
+          (name "GND"
+            (effects
+              (font (size 1.27 1.27))))
+          (number "2"
+            (effects
+              (font (size 1.27 1.27)))))
+        (pin power_out line (at 7.62 0 180) (length 2.54)
+          (name "VO"
+            (effects
+              (font (size 1.27 1.27))))
+          (number "3"
+            (effects
+              (font (size 1.27 1.27)))))))
+    (symbol "Device:C" (pin_numbers hide)
+      (pin_names (offset 0.254)) (in_bom yes) (on_board yes)
+      (property "Reference" "C" (at 0.635 2.54 0)
+        (effects
+          (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "C" (at 0.635 -2.54 0)
+        (effects
+          (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" "" (at 0.9652 -3.81 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "cap capacitor" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Unpolarized capacitor" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "C_*" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (symbol "C_0_1"
+        (polyline
+          (pts (xy -2.032 -0.762) (xy 2.032 -0.762))
+          (stroke (width 0.508) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy -2.032 0.762) (xy 2.032 0.762))
+          (stroke (width 0.508) (type default))
+          (fill (type none))))
+      (symbol "C_1_1"
+        (pin passive line (at 0 3.81 270) (length 2.794)
+          (name "~"
+            (effects
+              (font (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font (size 1.27 1.27)))))
+        (pin passive line (at 0 -3.81 90) (length 2.794)
+          (name "~"
+            (effects
+              (font (size 1.27 1.27))))
+          (number "2"
+            (effects
+              (font (size 1.27 1.27)))))))
+    (symbol "Diode:1N4007" (pin_numbers hide) (pin_names hide) (in_bom yes) (on_board yes)
+      (property "Reference" "D" (at 0 2.54 0)
+        (effects
+          (font (size 1.27 1.27))))
+      (property "Value" "1N4007" (at 0 -2.54 0)
+        (effects
+          (font (size 1.27 1.27))))
+      (property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" (at 0 -4.445 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "diode" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "ki_description" "1000V 1A General Purpose Rectifier Diode, DO-41" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "D*DO?41*" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (symbol "1N4007_0_1"
+        (polyline
+          (pts (xy -1.27 1.27) (xy -1.27 -1.27))
+          (stroke (width 0.254) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 1.27 0) (xy -1.27 0))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27))
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "1N4007_1_1"
+        (pin passive line (at -3.81 0 0) (length 2.54)
+          (name "K"
+            (effects
+              (font (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font (size 1.27 1.27)))))
+        (pin passive line (at 3.81 0 180) (length 2.54)
+          (name "A"
+            (effects
+              (font (size 1.27 1.27))))
+          (number "2"
+            (effects
+              (font (size 1.27 1.27)))))))
+    (symbol "power:+5V" (power)
+      (pin_names (offset 0)) (in_bom yes) (on_board yes)
+      (property "Reference" "#PWR" (at 0 -3.81 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "Value" "+5V" (at 0 3.556 0)
+        (effects
+          (font (size 1.27 1.27))))
+      (property "Footprint" "" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "global power" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Power symbol creates a global label with name \"+5V\"" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (symbol "+5V_0_1"
+        (polyline
+          (pts (xy -0.762 1.27) (xy 0 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 0) (xy 0 2.54))
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy 0 2.54) (xy 0.762 1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol "+5V_1_1"
+        (pin power_in line (at 0 0 90) (length 0) hide
+          (name "+5V"
+            (effects
+              (font (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font (size 1.27 1.27)))))))
+    (symbol "Connector_Generic:Conn_01x04"
+      (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
+      (property "Reference" "J" (at 0 5.08 0)
+        (effects
+          (font (size 1.27 1.27))))
+      (property "Value" "Conn_01x04" (at 0 -7.62 0)
+        (effects
+          (font (size 1.27 1.27))))
+      (property "Footprint" "" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "connector" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "Connector*:*_1x??_*" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (symbol "Conn_01x04_1_1"
+        (rectangle (start -1.27 -4.953) (end 0 -5.207)
+          (stroke (width 0.1524) (type default))
+          (fill (type none)))
+        (rectangle (start -1.27 -2.413) (end 0 -2.667)
+          (stroke (width 0.1524) (type default))
+          (fill (type none)))
+        (rectangle (start -1.27 0.127) (end 0 -0.127)
+          (stroke (width 0.1524) (type default))
+          (fill (type none)))
+        (rectangle (start -1.27 2.667) (end 0 2.413)
+          (stroke (width 0.1524) (type default))
+          (fill (type none)))
+        (rectangle (start -1.27 3.81) (end 1.27 -6.35)
+          (stroke (width 0.254) (type default))
+          (fill (type background)))
+        (pin passive line (at -5.08 2.54 0) (length 3.81)
+          (name "Pin_1"
+            (effects
+              (font (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font (size 1.27 1.27)))))
+        (pin passive line (at -5.08 0 0) (length 3.81)
+          (name "Pin_2"
+            (effects
+              (font (size 1.27 1.27))))
+          (number "2"
+            (effects
+              (font (size 1.27 1.27)))))
+        (pin passive line (at -5.08 -2.54 0) (length 3.81)
+          (name "Pin_3"
+            (effects
+              (font (size 1.27 1.27))))
+          (number "3"
+            (effects
+              (font (size 1.27 1.27)))))
+        (pin passive line (at -5.08 -5.08 0) (length 3.81)
+          (name "Pin_4"
+            (effects
+              (font (size 1.27 1.27))))
+          (number "4"
+            (effects
+              (font (size 1.27 1.27)))))))
+    (symbol "Device:R" (pin_numbers hide)
+      (pin_names (offset 0)) (in_bom yes) (on_board yes)
+      (property "Reference" "R" (at 2.032 0 90)
+        (effects
+          (font (size 1.27 1.27))))
+      (property "Value" "R" (at 0 0 90)
+        (effects
+          (font (size 1.27 1.27))))
+      (property "Footprint" "" (at -1.778 0 90)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "R res resistor" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Resistor" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "R_*" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (symbol "R_0_1"
+        (rectangle (start -1.016 -2.54) (end 1.016 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol "R_1_1"
+        (pin passive line (at 0 3.81 270) (length 1.27)
+          (name "~"
+            (effects
+              (font (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font (size 1.27 1.27)))))
+        (pin passive line (at 0 -3.81 90) (length 1.27)
+          (name "~"
+            (effects
+              (font (size 1.27 1.27))))
+          (number "2"
+            (effects
+              (font (size 1.27 1.27)))))))
+    (symbol "Amplifier_Operational:LM324"
+      (pin_names (offset 0.127)) (in_bom yes) (on_board yes)
+      (property "Reference" "U" (at 0 5.08 0)
+        (effects
+          (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "LM324" (at 0 -5.08 0)
+        (effects
+          (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" "" (at -1.27 2.54 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" (at 1.27 5.08 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "quad opamp" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Low-Power, Quad-Operational Amplifiers, DIP-14/SOIC-14/SSOP-14" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "SOIC*3.9x8.7mm*P1.27mm* DIP*W7.62mm* TSSOP*4.4x5mm*P0.65mm* SSOP*5.3x6.2mm*P0.65mm* MSOP*3x3mm*P0.5mm*" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (symbol "LM324_1_1"
+        (polyline
+          (pts (xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08))
+          (stroke (width 0.254) (type default))
+          (fill (type background)))
+        (pin output line (at 7.62 0 180) (length 2.54)
+          (name "~"
+            (effects
+              (font (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font (size 1.27 1.27)))))
+        (pin input line (at -7.62 -2.54 0) (length 2.54)
+          (name "-"
+            (effects
+              (font (size 1.27 1.27))))
+          (number "2"
+            (effects
+              (font (size 1.27 1.27)))))
+        (pin input line (at -7.62 2.54 0) (length 2.54)
+          (name "+"
+            (effects
+              (font (size 1.27 1.27))))
+          (number "3"
+            (effects
+              (font (size 1.27 1.27))))))
+      (symbol "LM324_2_1"
+        (polyline
+          (pts (xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08))
+          (stroke (width 0.254) (type default))
+          (fill (type background)))
+        (pin input line (at -7.62 2.54 0) (length 2.54)
+          (name "+"
+            (effects
+              (font (size 1.27 1.27))))
+          (number "5"
+            (effects
+              (font (size 1.27 1.27)))))
+        (pin input line (at -7.62 -2.54 0) (length 2.54)
+          (name "-"
+            (effects
+              (font (size 1.27 1.27))))
+          (number "6"
+            (effects
+              (font (size 1.27 1.27)))))
+        (pin output line (at 7.62 0 180) (length 2.54)
+          (name "~"
+            (effects
+              (font (size 1.27 1.27))))
+          (number "7"
+            (effects
+              (font (size 1.27 1.27))))))
+      (symbol "LM324_3_1"
+        (polyline
+          (pts (xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08))
+          (stroke (width 0.254) (type default))
+          (fill (type background)))
+        (pin input line (at -7.62 2.54 0) (length 2.54)
+          (name "+"
+            (effects
+              (font (size 1.27 1.27))))
+          (number "10"
+            (effects
+              (font (size 1.27 1.27)))))
+        (pin output line (at 7.62 0 180) (length 2.54)
+          (name "~"
+            (effects
+              (font (size 1.27 1.27))))
+          (number "8"
+            (effects
+              (font (size 1.27 1.27)))))
+        (pin input line (at -7.62 -2.54 0) (length 2.54)
+          (name "-"
+            (effects
+              (font (size 1.27 1.27))))
+          (number "9"
+            (effects
+              (font (size 1.27 1.27))))))
+      (symbol "LM324_4_1"
+        (polyline
+          (pts (xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08))
+          (stroke (width 0.254) (type default))
+          (fill (type background)))
+        (pin input line (at -7.62 2.54 0) (length 2.54)
+          (name "+"
+            (effects
+              (font (size 1.27 1.27))))
+          (number "12"
+            (effects
+              (font (size 1.27 1.27)))))
+        (pin input line (at -7.62 -2.54 0) (length 2.54)
+          (name "-"
+            (effects
+              (font (size 1.27 1.27))))
+          (number "13"
+            (effects
+              (font (size 1.27 1.27)))))
+        (pin output line (at 7.62 0 180) (length 2.54)
+          (name "~"
+            (effects
+              (font (size 1.27 1.27))))
+          (number "14"
+            (effects
+              (font (size 1.27 1.27))))))
+      (symbol "LM324_5_1"
+        (pin power_in line (at -2.54 -7.62 90) (length 3.81)
+          (name "V-"
+            (effects
+              (font (size 1.27 1.27))))
+          (number "11"
+            (effects
+              (font (size 1.27 1.27)))))
+        (pin power_in line (at -2.54 7.62 270) (length 3.81)
+          (name "V+"
+            (effects
+              (font (size 1.27 1.27))))
+          (number "4"
+            (effects
+              (font (size 1.27 1.27)))))))
+    (symbol "Connector_Generic:Conn_01x03"
+      (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
+      (property "Reference" "J" (at 0 5.08 0)
+        (effects
+          (font (size 1.27 1.27))))
+      (property "Value" "Conn_01x03" (at 0 -5.08 0)
+        (effects
+          (font (size 1.27 1.27))))
+      (property "Footprint" "" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "~" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "ki_keywords" "connector" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "ki_description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (property "ki_fp_filters" "Connector*:*_1x??_*" (at 0 0 0)
+        (effects
+          (font (size 1.27 1.27)) hide))
+      (symbol "Conn_01x03_1_1"
+        (rectangle (start -1.27 -2.413) (end 0 -2.667)
+          (stroke (width 0.1524) (type default))
+          (fill (type none)))
+        (rectangle (start -1.27 0.127) (end 0 -0.127)
+          (stroke (width 0.1524) (type default))
+          (fill (type none)))
+        (rectangle (start -1.27 2.667) (end 0 2.413)
+          (stroke (width 0.1524) (type default))
+          (fill (type none)))
+        (rectangle (start -1.27 3.81) (end 1.27 -3.81)
+          (stroke (width 0.254) (type default))
+          (fill (type background)))
+        (pin passive line (at -5.08 2.54 0) (length 3.81)
+          (name "Pin_1"
+            (effects
+              (font (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font (size 1.27 1.27)))))
+        (pin passive line (at -5.08 0 0) (length 3.81)
+          (name "Pin_2"
+            (effects
+              (font (size 1.27 1.27))))
+          (number "2"
+            (effects
+              (font (size 1.27 1.27)))))
+        (pin passive line (at -5.08 -2.54 0) (length 3.81)
+          (name "Pin_3"
+            (effects
+              (font (size 1.27 1.27))))
+          (number "3"
+            (effects
+              (font (size 1.27 1.27))))))))
+  (junction (at 40.64 50.8) (diameter 0) (color 0 0 0 0) (uuid 1914fff4-d632-4137-bd85-97c2198d5a3a))
+  (junction (at 45.72 50.8) (diameter 0) (color 0 0 0 0) (uuid 2d83660e-4e45-46f8-8f91-be82dcac29b5))
+  (junction (at 50.8 129.54) (diameter 0) (color 0 0 0 0) (uuid add1d2ee-6376-4f70-8882-79ffa04e4df9))
+  (junction (at 53.34 50.8) (diameter 0) (color 0 0 0 0) (uuid dcc258f4-56e4-465a-9ff7-343147513e02))
+  (junction (at 58.42 129.54) (diameter 0) (color 0 0 0 0) (uuid 6f3aaf5c-d91f-4153-881c-9c13773dfdfe))
+  (junction (at 63.5 50.8) (diameter 0) (color 0 0 0 0) (uuid cd7be0e7-4919-483a-9b37-7135c36ffb16))
+  (junction (at 71.12 50.8) (diameter 0) (color 0 0 0 0) (uuid f102665d-7887-4450-84b0-9930aa18d1dc))
+  (junction (at 91.44 50.8) (diameter 0) (color 0 0 0 0) (uuid 1b322d4f-4abc-4f15-9f74-ba2d6ce9b55a))
+  (junction (at 91.44 93.98) (diameter 0) (color 0 0 0 0) (uuid 3242207f-4af3-431c-81ba-1ddd0ab3964e))
+  (junction (at 91.44 114.3) (diameter 0) (color 0 0 0 0) (uuid 12ddb5e7-5086-406b-8f48-58b03f618d49))
+  (junction (at 91.44 134.62) (diameter 0) (color 0 0 0 0) (uuid 0e1be12e-cf1f-41f9-886b-b308bab38b7a))
+  (junction (at 99.06 50.8) (diameter 0) (color 0 0 0 0) (uuid f798f159-5b6f-4629-98a8-6aeb037a5417))
+  (junction (at 111.76 50.8) (diameter 0) (color 0 0 0 0) (uuid 5e880eee-f214-44b2-848b-53c561046312))
+  (wire
+    (pts (xy 35.56 53.34) (xy 38.1 53.34))
+    (stroke (width 0) (type default)) (uuid a4eb0d63-5c22-49a7-91f4-e86b4c031970))
+  (wire
+    (pts (xy 38.1 53.34) (xy 38.1 58.42))
+    (stroke (width 0) (type default)) (uuid 39b44007-5f6f-4c30-ae8b-bb3dc50be04e))
+  (wire
+    (pts (xy 35.56 50.8) (xy 40.64 50.8))
+    (stroke (width 0) (type default)) (uuid 5cc8268a-0584-413e-939d-b2917e5313d5))
+  (wire
+    (pts (xy 40.64 50.8) (xy 45.72 50.8))
+    (stroke (width 0) (type default)) (uuid 409d350d-d150-4756-87de-4f075fa93d41))
+  (wire
+    (pts (xy 45.72 50.8) (xy 53.34 50.8))
+    (stroke (width 0) (type default)) (uuid 64339b5e-9209-4a16-b07d-aeb4a74da24e))
+  (wire
+    (pts (xy 53.34 50.8) (xy 63.5 50.8))
+    (stroke (width 0) (type default)) (uuid c1408397-e13b-4b7f-9df5-17a5910e9731))
+  (wire
+    (pts (xy 63.5 50.8) (xy 71.12 50.8))
+    (stroke (width 0) (type default)) (uuid f403601e-9f3f-4e50-b77b-fca6c9d43fad))
+  (wire
+    (pts (xy 71.12 50.8) (xy 73.66 50.8))
+    (stroke (width 0) (type default)) (uuid 8d0bfaf8-8540-4636-86cb-d0dc7be2c5bd))
+  (wire
+    (pts (xy 88.9 50.8) (xy 91.44 50.8))
+    (stroke (width 0) (type default)) (uuid 82338a00-835a-4883-a107-0092fe334545))
+  (wire
+    (pts (xy 91.44 50.8) (xy 99.06 50.8))
+    (stroke (width 0) (type default)) (uuid 19301d86-9fb0-400e-8bea-b0627670a759))
+  (wire
+    (pts (xy 99.06 50.8) (xy 111.76 50.8))
+    (stroke (width 0) (type default)) (uuid 4f377e1c-ef22-44d2-8720-b8fcdffe33fc))
+  (wire
+    (pts (xy 111.76 50.8) (xy 121.92 50.8))
+    (stroke (width 0) (type default)) (uuid 44192c51-4c53-4394-8d4a-f7f897458b28))
+  (wire
+    (pts (xy 71.12 50.8) (xy 71.12 43.18))
+    (stroke (width 0) (type default)) (uuid 80231c9d-cddc-4bf7-b760-ed612f0bbb18))
+  (wire
+    (pts (xy 71.12 43.18) (xy 77.47 43.18))
+    (stroke (width 0) (type default)) (uuid 8a584328-1cd8-417e-8751-34646654b2c0))
+  (wire
+    (pts (xy 85.09 43.18) (xy 91.44 43.18))
+    (stroke (width 0) (type default)) (uuid 2396c40a-1c6f-4285-b419-4aadc1ca37fb))
+  (wire
+    (pts (xy 91.44 43.18) (xy 91.44 50.8))
+    (stroke (width 0) (type default)) (uuid 465be198-7fe5-4d5f-b74e-dbcb5eb86227))
+  (wire
+    (pts (xy 35.56 96.52) (xy 40.64 96.52))
+    (stroke (width 0) (type default)) (uuid e2076d45-a952-428a-a48a-bfec0d7c249a))
+  (wire
+    (pts (xy 35.56 99.06) (xy 48.26 99.06))
+    (stroke (width 0) (type default)) (uuid 3a938473-0b4b-488e-b925-2ea0250cda80))
+  (wire
+    (pts (xy 35.56 101.6) (xy 48.26 101.6))
+    (stroke (width 0) (type default)) (uuid 09447fb8-fbcb-46ce-8cc5-8c4f3b29871c))
+  (wire
+    (pts (xy 35.56 104.14) (xy 48.26 104.14))
+    (stroke (width 0) (type default)) (uuid da4d0f08-a975-47b1-b374-b4e741fcb819))
+  (wire
+    (pts (xy 50.8 129.54) (xy 58.42 129.54))
+    (stroke (width 0) (type default)) (uuid d0582cf0-9bb9-44de-a729-9b3af7071a50))
+  (wire
+    (pts (xy 58.42 129.54) (xy 66.04 129.54))
+    (stroke (width 0) (type default)) (uuid 9577de75-e666-4e42-94a2-0fbbc3ba1671))
+  (wire
+    (pts (xy 83.82 93.98) (xy 91.44 93.98))
+    (stroke (width 0) (type default)) (uuid ca5cbad5-741a-409e-8721-f40e5e529f14))
+  (wire
+    (pts (xy 91.44 93.98) (xy 104.14 93.98))
+    (stroke (width 0) (type default)) (uuid 817785b0-4d84-4db4-a651-c9007e7884f5))
+  (wire
+    (pts (xy 101.6 99.06) (xy 104.14 99.06))
+    (stroke (width 0) (type default)) (uuid fd90504a-3015-4587-907b-d982cdd3831d))
+  (wire
+    (pts (xy 83.82 114.3) (xy 91.44 114.3))
+    (stroke (width 0) (type default)) (uuid 94c93fef-0d11-4567-9559-01d247596a97))
+  (wire
+    (pts (xy 91.44 114.3) (xy 104.14 114.3))
+    (stroke (width 0) (type default)) (uuid 7f5a45e1-4173-46a7-b7af-a308eff10dbb))
+  (wire
+    (pts (xy 101.6 119.38) (xy 104.14 119.38))
+    (stroke (width 0) (type default)) (uuid 4bedb1f5-2fc6-4d8c-900f-23e1498b0e3c))
+  (wire
+    (pts (xy 83.82 134.62) (xy 91.44 134.62))
+    (stroke (width 0) (type default)) (uuid 52bb5605-7b78-4a00-b60d-26b2c980b4ed))
+  (wire
+    (pts (xy 91.44 134.62) (xy 104.14 134.62))
+    (stroke (width 0) (type default)) (uuid d1fe2039-6bfb-4e87-adf4-71509552408a))
+  (wire
+    (pts (xy 101.6 139.7) (xy 104.14 139.7))
+    (stroke (width 0) (type default)) (uuid e47ea0f4-d465-40cd-9084-ef7bf6820321))
+  (wire
+    (pts (xy 119.38 96.52) (xy 124.46 96.52))
+    (stroke (width 0) (type default)) (uuid f88e952c-c53d-40db-b634-b6152a649577))
+  (wire
+    (pts (xy 124.46 96.52) (xy 147.32 96.52))
+    (stroke (width 0) (type default)) (uuid 40de4f10-b211-448f-956a-c0558561ffba))
+  (wire
+    (pts (xy 147.32 96.52) (xy 147.32 99.06))
+    (stroke (width 0) (type default)) (uuid a4e9e320-c16d-42dd-b04e-4a3a1c07549b))
+  (wire
+    (pts (xy 147.32 99.06) (xy 165.1 99.06))
+    (stroke (width 0) (type default)) (uuid 5ebc3119-3036-4420-95cf-eccdb0d9eef7))
+  (wire
+    (pts (xy 165.1 93.98) (xy 160.02 93.98))
+    (stroke (width 0) (type default)) (uuid 665d808f-29bb-4d36-b429-0b5177939eab))
+  (wire
+    (pts (xy 165.1 96.52) (xy 160.02 96.52))
+    (stroke (width 0) (type default)) (uuid e1c78732-4f92-4c68-9333-4935108e1fc8))
+  (wire
+    (pts (xy 119.38 116.84) (xy 124.46 116.84))
+    (stroke (width 0) (type default)) (uuid 72e44d0b-bc37-4029-a237-87bf69edf07e))
+  (wire
+    (pts (xy 124.46 116.84) (xy 147.32 116.84))
+    (stroke (width 0) (type default)) (uuid e415532c-9ae7-4b58-880d-04456a828533))
+  (wire
+    (pts (xy 147.32 116.84) (xy 147.32 119.38))
+    (stroke (width 0) (type default)) (uuid ae72ca77-1247-4979-a76f-ba782ba8f521))
+  (wire
+    (pts (xy 147.32 119.38) (xy 165.1 119.38))
+    (stroke (width 0) (type default)) (uuid 8681b42e-b1a9-4bc5-9d36-375e4bb4115b))
+  (wire
+    (pts (xy 165.1 114.3) (xy 160.02 114.3))
+    (stroke (width 0) (type default)) (uuid e78f513c-7259-4df6-93d5-c630192599aa))
+  (wire
+    (pts (xy 165.1 116.84) (xy 160.02 116.84))
+    (stroke (width 0) (type default)) (uuid f984b83a-ecf0-4cd5-b53c-b8882edb5cf1))
+  (wire
+    (pts (xy 119.38 137.16) (xy 124.46 137.16))
+    (stroke (width 0) (type default)) (uuid d8624da5-0656-432e-811b-3ebd50741df5))
+  (wire
+    (pts (xy 124.46 137.16) (xy 147.32 137.16))
+    (stroke (width 0) (type default)) (uuid e77ada4b-a876-429c-80d4-7d3f6ecaced7))
+  (wire
+    (pts (xy 147.32 137.16) (xy 147.32 139.7))
+    (stroke (width 0) (type default)) (uuid 094ba8f8-56b4-4263-8e16-326a5312a127))
+  (wire
+    (pts (xy 147.32 139.7) (xy 165.1 139.7))
+    (stroke (width 0) (type default)) (uuid 6a9a2768-bc45-41d2-b685-7ade29bdd1a9))
+  (wire
+    (pts (xy 165.1 134.62) (xy 160.02 134.62))
+    (stroke (width 0) (type default)) (uuid 920384bb-f58f-4b40-9e04-49fc79c07ba6))
+  (wire
+    (pts (xy 165.1 137.16) (xy 160.02 137.16))
+    (stroke (width 0) (type default)) (uuid 16d41e05-e12c-4167-955c-a0645c8def56))
+  (wire
+    (pts (xy 104.14 154.94) (xy 99.06 154.94))
+    (stroke (width 0) (type default)) (uuid f63f6d49-2e56-44e1-b366-52f69622afb0))
+  (wire
+    (pts (xy 104.14 160.02) (xy 101.6 160.02))
+    (stroke (width 0) (type default)) (uuid 2df80fd9-7797-44b6-8b94-e83e91c5fe65))
+  (wire
+    (pts (xy 101.6 160.02) (xy 101.6 165.1))
+    (stroke (width 0) (type default)) (uuid a767fab9-783c-4956-b525-d7f27e065c03))
+  (wire
+    (pts (xy 101.6 165.1) (xy 121.92 165.1))
+    (stroke (width 0) (type default)) (uuid 00f75aef-4a80-466c-916a-4735b33fed8e))
+  (wire
+    (pts (xy 121.92 165.1) (xy 121.92 157.48))
+    (stroke (width 0) (type default)) (uuid 57c6d26a-6a0b-4d55-aa43-c6aafd9ed3ec))
+  (wire
+    (pts (xy 121.92 157.48) (xy 119.38 157.48))
+    (stroke (width 0) (type default)) (uuid a5d60af2-d311-43f4-a311-d48776ab59f2))
+  (label "PWM1_IN" (at 48.26 99.06 0)
+    (effects
+      (font (size 1.27 1.27)) (justify left bottom)) (uuid 669977ee-5bac-4c0f-aaad-015e55bee537))
+  (label "PWM2_IN" (at 48.26 101.6 0)
+    (effects
+      (font (size 1.27 1.27)) (justify left bottom)) (uuid 6b0d45f7-9e80-4b3e-9b3b-4c461b8c2384))
+  (label "PWM3_IN" (at 48.26 104.14 0)
+    (effects
+      (font (size 1.27 1.27)) (justify left bottom)) (uuid 487c0ca4-4c18-45d0-9e1b-c3847de9d4d2))
+  (label "VREF" (at 66.04 129.54 0)
+    (effects
+      (font (size 1.27 1.27)) (justify left bottom)) (uuid 23ed0018-33fa-4697-9ae8-b59528a01ecb))
+  (label "PWM1_IN" (at 83.82 93.98 180)
+    (effects
+      (font (size 1.27 1.27)) (justify right bottom)) (uuid aae78dbd-20c0-46ae-af4f-7c56ca0113b4))
+  (label "VREF" (at 101.6 99.06 180)
+    (effects
+      (font (size 1.27 1.27)) (justify right bottom)) (uuid 68bac83b-5629-40dd-ad7f-15071ad4bd6c))
+  (label "PWM2_IN" (at 83.82 114.3 180)
+    (effects
+      (font (size 1.27 1.27)) (justify right bottom)) (uuid 33428430-02e6-47dc-b355-5610cdfa18db))
+  (label "VREF" (at 101.6 119.38 180)
+    (effects
+      (font (size 1.27 1.27)) (justify right bottom)) (uuid 9f2b2e19-6f96-49cb-b34a-65f2b3107298))
+  (label "PWM3_IN" (at 83.82 134.62 180)
+    (effects
+      (font (size 1.27 1.27)) (justify right bottom)) (uuid 114be467-219a-4432-b80b-145fe2fb49f4))
+  (label "VREF" (at 101.6 139.7 180)
+    (effects
+      (font (size 1.27 1.27)) (justify right bottom)) (uuid 5699714a-d112-4cb7-8cac-2d1ee60c4c14))
+  (label "PWM1_5V" (at 124.46 96.52 0)
+    (effects
+      (font (size 1.27 1.27)) (justify left bottom)) (uuid b7393524-5337-472c-93c4-8c88eee23358))
+  (label "PWM2_5V" (at 124.46 116.84 0)
+    (effects
+      (font (size 1.27 1.27)) (justify left bottom)) (uuid 7453b399-c779-4525-8188-32033eae7943))
+  (label "PWM3_5V" (at 124.46 137.16 0)
+    (effects
+      (font (size 1.27 1.27)) (justify left bottom)) (uuid a3c38600-145c-4056-8cf3-62ba3352e8db))
+  (text "ALIMENTAZIONE - Variante A: regolatore lineare LM7805" (at 17.78 30.48 0)
+    (effects
+      (font (size 1.524 1.524) bold) (justify left bottom)) (uuid 9c55936c-6643-432c-a4b6-1a92e8513288))
+  (text "Ingresso LiPo 2S\n(6.0 ... 8.4 V)" (at 17.78 41.91 0)
+    (effects
+      (font (size 1.27 1.27)) (justify left bottom)) (uuid d6aecc0a-2751-48ff-b9a6-61ebf36306a8))
+  (text "D1: protezione da correnti inverse\n(catodo su IN, anodo su OUT)" (at 96.52 40.64 0)
+    (effects
+      (font (size 1.27 1.27)) (justify left bottom)) (uuid ad13edd6-806f-40fa-b4d3-439b49eb8691))
+  (text "Dal microcontrollore:\n1 = GND\n2 = PWM1  3 = PWM2  4 = PWM3" (at 17.78 87.63 0)
+    (effects
+      (font (size 1.27 1.27)) (justify left bottom)) (uuid ab402bc7-b591-45c5-9114-c9871173d537))
+  (text "VREF = 5V x 10k / (22k + 10k)\n       = 1.56 V (soglia)" (at 25.4 147.32 0)
+    (effects
+      (font (size 1.27 1.27)) (justify left bottom)) (uuid 7e3df621-4175-4e45-b7c5-a8fc278a3655))
+  (text "Servo: 1 = GND, 2 = +5V, 3 = PWM 5V" (at 152.4 87.63 0)
+    (effects
+      (font (size 1.27 1.27)) (justify left bottom)) (uuid 4387a071-5ec8-4a97-a47a-ccc07a377e29))
+  (text "U2D non usata:\nIN+ a GND, uscita\nretroazionata su IN-" (at 68.58 154.94 0)
+    (effects
+      (font (size 1.27 1.27)) (justify left bottom)) (uuid 0a6c7f77-339d-4613-bf09-82b3e4929210))
+  (text "LEVEL SHIFTER 3.3V -> 5V  (LM324, comparatori non invertenti: IN+ = PWM, IN- = VREF)" (at 68.58 85.09 0)
+    (effects
+      (font (size 1.524 1.524) bold) (justify left bottom)) (uuid 033eb8ca-6ff1-4a29-b30a-327d40ae8821))
+  (text "NOTE\n- U1 dissipa (Vin - 5V) x I: con 7.4V e 1A sono circa 2.4W -> serve un dissipatore sul TO-220.\n- Il 7805 richiede circa 2V di caduta: sotto ~7V di batteria l'uscita scende sotto 5V.\n  Alternativa a basso dropout con lo stesso pinout TO-220: LM2940-5.0.\n- LM324 alimentato a 5V: l'uscita alta arriva a ~3.5-3.8V (non rail-to-rail). Ai servo basta;\n  per avere 5V pieni montare MCP6004 o LMV324 nello stesso zoccolo DIP-14 (stesso pinout).\n- R3-R5 (pull-down) tengono basse le uscite se il microcontrollore e' scollegato." (at 17.78 193.04 0)
+    (effects
+      (font (size 1.27 1.27)) (justify left bottom)) (uuid 8ecaa23b-cd6f-475b-86a6-7454cae2320e))
+  (symbol (lib_id "Connector_Generic:Conn_01x02") (at 30.48 50.8 0) (mirror y) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 3c70fb47-1c15-4976-b5a7-8845655ecbf0)
+    (property "Reference" "J1" (at 30.48 45.72 0)
+      (effects
+        (font (size 1.27 1.27))))
+    (property "Value" "BATT 7.4V (JST-PH)" (at 27.94 57.15 0)
+      (effects
+        (font (size 1.27 1.27))))
+    (property "Footprint" "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical" (at 30.48 50.8 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 30.48 50.8 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 81a3c976-f173-47b1-9b9f-c771382b1b52))
+    (pin "2" (uuid 3362ac23-9c03-400d-8731-f8fe8306ac57))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "J1") (unit 1)))))
+  (symbol (lib_id "power:+BATT") (at 40.64 50.8 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 297c6faf-aa4e-47f4-b953-325cf07c6429)
+    (property "Reference" "#PWR01" (at 40.64 50.8 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Value" "+BATT" (at 40.64 46.99 0)
+      (effects
+        (font (size 1.27 1.27))))
+    (property "Footprint" "" (at 40.64 50.8 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 40.64 50.8 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 56277ce1-e062-41de-bba4-bf1a96263d84))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR01") (unit 1)))))
+  (symbol (lib_id "Device:C_Polarized") (at 45.72 54.61 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid b92a1bd0-4b66-4390-8752-f94d70999303)
+    (property "Reference" "C1" (at 48.26 53.34 0)
+      (effects
+        (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "100uF 16V" (at 48.26 55.88 0)
+      (effects
+        (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" (at 45.72 54.61 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 45.72 54.61 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 546321b5-5bd9-4830-9c79-dbcc5dbea25d))
+    (pin "2" (uuid 95e00941-d9ff-4a28-ae25-8964520e8347))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "C1") (unit 1)))))
+  (symbol (lib_id "power:GND") (at 45.72 58.42 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 39797a9a-7dd6-45f0-bbfd-4528b4d1c4eb)
+    (property "Reference" "#PWR02" (at 45.72 58.42 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 45.72 62.23 0)
+      (effects
+        (font (size 1.27 1.27))))
+    (property "Footprint" "" (at 45.72 58.42 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 45.72 58.42 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 7e46c720-eb71-4c39-a87b-e1989a93e01a))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR02") (unit 1)))))
+  (symbol (lib_id "power:GND") (at 38.1 58.42 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 5863d2f1-31e5-414a-a841-a051174f4a40)
+    (property "Reference" "#PWR03" (at 38.1 58.42 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 38.1 62.23 0)
+      (effects
+        (font (size 1.27 1.27))))
+    (property "Footprint" "" (at 38.1 58.42 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 38.1 58.42 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 659329bd-ee6e-46ad-868c-1a41fd983fd7))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR03") (unit 1)))))
+  (symbol (lib_id "power:PWR_FLAG") (at 53.34 50.8 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 7955b917-7321-4341-8280-90eb0997faf0)
+    (property "Reference" "#FLG04" (at 53.34 50.8 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Value" "PWR_FLAG" (at 53.34 46.99 0)
+      (effects
+        (font (size 1.27 1.27))))
+    (property "Footprint" "" (at 53.34 50.8 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 53.34 50.8 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 931d514b-0dbe-4c4f-985b-a13e60bb148f))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#FLG04") (unit 1)))))
+  (symbol (lib_id "power:PWR_FLAG") (at 25.4 68.58 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 58ef3eae-265c-470b-a836-ea80389ba4a0)
+    (property "Reference" "#FLG05" (at 25.4 68.58 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Value" "PWR_FLAG" (at 25.4 64.77 0)
+      (effects
+        (font (size 1.27 1.27))))
+    (property "Footprint" "" (at 25.4 68.58 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 25.4 68.58 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 5ee29fbb-cf38-458f-9b32-de344984b681))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#FLG05") (unit 1)))))
+  (symbol (lib_id "power:GND") (at 25.4 68.58 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid ef0d71be-1d46-4967-b72d-aedecad83c73)
+    (property "Reference" "#PWR06" (at 25.4 68.58 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 25.4 72.39 0)
+      (effects
+        (font (size 1.27 1.27))))
+    (property "Footprint" "" (at 25.4 68.58 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 25.4 68.58 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 9ee48534-7068-4b40-bb7f-5b0324949506))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR06") (unit 1)))))
+  (symbol (lib_id "Regulator_Linear:LM7805_TO220") (at 81.28 50.8 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 79964122-be82-4c06-a78e-8faaa222c21d)
+    (property "Reference" "U1" (at 85.09 58.42 0)
+      (effects
+        (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "LM7805" (at 85.09 60.96 0)
+      (effects
+        (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical" (at 81.28 50.8 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 81.28 50.8 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid f4391c16-150a-4df0-a434-5b06b6325969))
+    (pin "2" (uuid 3b1baba9-0768-4db5-b56d-9aff7716f14d))
+    (pin "3" (uuid d0320404-f9e8-4cec-919c-cd058a8b5114))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "U1") (unit 1)))))
+  (symbol (lib_id "Device:C") (at 63.5 54.61 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 0fae0c5f-093e-41b1-a861-cc8fc4e2e710)
+    (property "Reference" "C4" (at 66.04 53.34 0)
+      (effects
+        (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "330nF" (at 66.04 55.88 0)
+      (effects
+        (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" (at 63.5 54.61 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 63.5 54.61 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 8bd8b686-254e-4007-9dec-f7295ba34a99))
+    (pin "2" (uuid 7afa3d70-e576-4685-bffc-48326a86b1ad))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "C4") (unit 1)))))
+  (symbol (lib_id "Device:C") (at 99.06 54.61 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 5b53a52b-1bf5-4b7c-a775-f5c5ffc375bc)
+    (property "Reference" "C5" (at 101.6 53.34 0)
+      (effects
+        (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "100nF" (at 101.6 55.88 0)
+      (effects
+        (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" (at 99.06 54.61 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 99.06 54.61 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid d558ad07-08e5-44e7-962d-a7fb211a94c9))
+    (pin "2" (uuid 761fdd16-542d-4c90-a967-3da445c38dcb))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "C5") (unit 1)))))
+  (symbol (lib_id "Device:C_Polarized") (at 111.76 54.61 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid d167ac4c-22c2-44ab-b74d-0ced9c1ca431)
+    (property "Reference" "C6" (at 114.3 53.34 0)
+      (effects
+        (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "100uF 10V" (at 114.3 55.88 0)
+      (effects
+        (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" (at 111.76 54.61 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 111.76 54.61 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid ac54e520-0c97-4d21-a6e7-9111d3c80d89))
+    (pin "2" (uuid c74cee73-2ca8-4fbf-a855-55c0512db570))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "C6") (unit 1)))))
+  (symbol (lib_id "Diode:1N4007") (at 81.28 43.18 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 3aee6840-7741-45e8-8379-aa1f9f1a66fd)
+    (property "Reference" "D1" (at 81.28 38.1 0)
+      (effects
+        (font (size 1.27 1.27))))
+    (property "Value" "1N4007" (at 81.28 40.64 0)
+      (effects
+        (font (size 1.27 1.27))))
+    (property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" (at 81.28 43.18 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 81.28 43.18 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 3f3fce9c-6a73-46d8-9415-302b08c6850c))
+    (pin "2" (uuid d3b9f301-e6fe-43d4-b62c-069a1f4fdc70))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "D1") (unit 1)))))
+  (symbol (lib_id "power:GND") (at 63.5 58.42 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 2497b276-2b84-4829-8c5f-1cf1ec90ffbf)
+    (property "Reference" "#PWR07" (at 63.5 58.42 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 63.5 62.23 0)
+      (effects
+        (font (size 1.27 1.27))))
+    (property "Footprint" "" (at 63.5 58.42 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 63.5 58.42 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 80ba0780-901d-4057-8a53-45871a51b438))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR07") (unit 1)))))
+  (symbol (lib_id "power:GND") (at 99.06 58.42 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 76170d91-89cb-4306-983a-935dee9133c2)
+    (property "Reference" "#PWR08" (at 99.06 58.42 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 99.06 62.23 0)
+      (effects
+        (font (size 1.27 1.27))))
+    (property "Footprint" "" (at 99.06 58.42 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 99.06 58.42 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid dfd86a35-80b7-45da-b1ae-da4a4ba2e2cb))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR08") (unit 1)))))
+  (symbol (lib_id "power:GND") (at 111.76 58.42 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 089ecc2a-9fdd-4cd6-abf3-069e1088b12f)
+    (property "Reference" "#PWR09" (at 111.76 58.42 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 111.76 62.23 0)
+      (effects
+        (font (size 1.27 1.27))))
+    (property "Footprint" "" (at 111.76 58.42 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 111.76 58.42 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 325bb634-7b4a-4bec-ab31-ba0161a77c6b))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR09") (unit 1)))))
+  (symbol (lib_id "power:GND") (at 81.28 58.42 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 68a00af1-37ff-496c-8686-ea8b617288b6)
+    (property "Reference" "#PWR10" (at 81.28 58.42 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 81.28 62.23 0)
+      (effects
+        (font (size 1.27 1.27))))
+    (property "Footprint" "" (at 81.28 58.42 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 81.28 58.42 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 3b6c0b2e-a744-4c9c-a649-53a13ba1a64c))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR10") (unit 1)))))
+  (symbol (lib_id "power:+5V") (at 121.92 50.8 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 9f337cb7-0dde-436c-b916-071af092a651)
+    (property "Reference" "#PWR11" (at 121.92 50.8 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Value" "+5V" (at 121.92 46.99 0)
+      (effects
+        (font (size 1.27 1.27))))
+    (property "Footprint" "" (at 121.92 50.8 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 121.92 50.8 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 0a049e63-5dee-4625-9133-8d19761ac295))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR11") (unit 1)))))
+  (symbol (lib_id "Connector_Generic:Conn_01x04") (at 30.48 99.06 0) (mirror y) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid a2b6dbd8-1c79-4682-8fab-1ab33effe7dc)
+    (property "Reference" "J2" (at 30.48 93.98 0)
+      (effects
+        (font (size 1.27 1.27))))
+    (property "Value" "PWM IN 3.3V" (at 27.94 109.22 0)
+      (effects
+        (font (size 1.27 1.27))))
+    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" (at 30.48 99.06 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 30.48 99.06 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid fd99b4ee-3a37-41c7-be49-9b22b04a2738))
+    (pin "2" (uuid cde3352c-1a26-4112-a0ee-e8d53bd19339))
+    (pin "3" (uuid 62e2afde-2fc5-4d51-86cf-9cc684122b52))
+    (pin "4" (uuid dfdaba1e-7a78-455c-a96b-32cc4755454e))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "J2") (unit 1)))))
+  (symbol (lib_id "power:GND") (at 40.64 96.52 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 5ebfef65-5dcb-479a-88e7-1da87ec02f3e)
+    (property "Reference" "#PWR12" (at 40.64 96.52 90)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 45.72 96.52 90)
+      (effects
+        (font (size 1.27 1.27))))
+    (property "Footprint" "" (at 40.64 96.52 90)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 40.64 96.52 90)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid cc64439f-3794-4649-ab37-5adf6cddc62b))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR12") (unit 1)))))
+  (symbol (lib_id "Device:R") (at 50.8 125.73 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid c06a20a7-f603-47bb-a256-99feb1200f87)
+    (property "Reference" "R1" (at 53.34 124.46 0)
+      (effects
+        (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "22k" (at 53.34 127 0)
+      (effects
+        (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" (at 50.8 125.73 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 50.8 125.73 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid f8754865-f4f4-4870-b601-1ac6630c86fd))
+    (pin "2" (uuid 4f6fc6e9-fade-4184-ad8b-a6ffaeb1d3ca))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "R1") (unit 1)))))
+  (symbol (lib_id "Device:R") (at 50.8 133.35 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 72ff7448-7a00-4657-8570-50c92cda8aa7)
+    (property "Reference" "R2" (at 48.26 132.08 0)
+      (effects
+        (font (size 1.27 1.27)) (justify right)))
+    (property "Value" "10k" (at 48.26 134.62 0)
+      (effects
+        (font (size 1.27 1.27)) (justify right)))
+    (property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" (at 50.8 133.35 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 50.8 133.35 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 7c88a2fc-f4f7-4cb0-ad8f-a373fecda5ca))
+    (pin "2" (uuid 5c74fb6b-9fa2-43aa-b8a7-27ff2cb1dae6))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "R2") (unit 1)))))
+  (symbol (lib_id "Device:C") (at 58.42 133.35 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid dc9fa084-c493-4f1d-a110-09f2348a5d73)
+    (property "Reference" "C2" (at 60.96 132.08 0)
+      (effects
+        (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "100nF" (at 60.96 134.62 0)
+      (effects
+        (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" (at 58.42 133.35 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 58.42 133.35 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid cafa1b44-1eac-4e04-a524-8448b658f138))
+    (pin "2" (uuid 831492d3-786d-4789-b325-f950367222d1))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "C2") (unit 1)))))
+  (symbol (lib_id "power:+5V") (at 50.8 121.92 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 60e6e205-d75f-4a17-bb63-279beb5ca035)
+    (property "Reference" "#PWR13" (at 50.8 121.92 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Value" "+5V" (at 50.8 118.11 0)
+      (effects
+        (font (size 1.27 1.27))))
+    (property "Footprint" "" (at 50.8 121.92 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 50.8 121.92 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid f36f88b4-6200-41bb-9cc3-bdcfcd21f5e7))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR13") (unit 1)))))
+  (symbol (lib_id "power:GND") (at 50.8 137.16 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 6f42fe4e-487f-4787-b51d-6ee0c067543a)
+    (property "Reference" "#PWR14" (at 50.8 137.16 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 50.8 140.97 0)
+      (effects
+        (font (size 1.27 1.27))))
+    (property "Footprint" "" (at 50.8 137.16 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 50.8 137.16 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 2497a72d-8f9c-40df-ae4b-9f0cc3062626))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR14") (unit 1)))))
+  (symbol (lib_id "power:GND") (at 58.42 137.16 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 012422ba-8e88-4066-a328-b8e2a1bab00d)
+    (property "Reference" "#PWR15" (at 58.42 137.16 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 58.42 140.97 0)
+      (effects
+        (font (size 1.27 1.27))))
+    (property "Footprint" "" (at 58.42 137.16 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 58.42 137.16 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 730c45f7-9a31-4eb7-8de8-7142398fe3aa))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR15") (unit 1)))))
+  (symbol (lib_id "Amplifier_Operational:LM324") (at 111.76 96.52 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid db5055dc-87d4-4070-809d-66331393df72)
+    (property "Reference" "U2" (at 113.03 87.63 0)
+      (effects
+        (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "LM324" (at 113.03 90.17 0)
+      (effects
+        (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Package_DIP:DIP-14_W7.62mm" (at 111.76 96.52 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 111.76 96.52 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 89c1bca0-e191-49b9-b021-8a9d041cb334))
+    (pin "2" (uuid 0af34ddf-742b-447b-9b00-04214f24f7ae))
+    (pin "3" (uuid 241164dd-6927-4687-bcf2-40afbd0d1360))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "U2") (unit 1)))))
+  (symbol (lib_id "Device:R") (at 91.44 97.79 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 6fd1ca67-60ad-440b-a9a6-9e39dabb746a)
+    (property "Reference" "R3" (at 88.9 96.52 0)
+      (effects
+        (font (size 1.27 1.27)) (justify right)))
+    (property "Value" "100k" (at 88.9 99.06 0)
+      (effects
+        (font (size 1.27 1.27)) (justify right)))
+    (property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" (at 91.44 97.79 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 91.44 97.79 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid bc5653f4-5c68-4364-a007-aab89c2933c0))
+    (pin "2" (uuid c3f9e850-7b4c-4502-b3da-3f0ddf63402e))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "R3") (unit 1)))))
+  (symbol (lib_id "power:GND") (at 91.44 101.6 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 78ccb647-776f-437d-97dd-f5894325a8d6)
+    (property "Reference" "#PWR16" (at 91.44 101.6 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 91.44 105.41 0)
+      (effects
+        (font (size 1.27 1.27))))
+    (property "Footprint" "" (at 91.44 101.6 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 91.44 101.6 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid f1592372-ecb1-4cc9-b983-7df2d740642f))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR16") (unit 1)))))
+  (symbol (lib_id "Amplifier_Operational:LM324") (at 111.76 116.84 0) (unit 2) (in_bom yes) (on_board yes) (dnp no) (uuid 5859b6f2-5790-4d70-b0f4-d8e579b180f2)
+    (property "Reference" "U2" (at 113.03 107.95 0)
+      (effects
+        (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "LM324" (at 113.03 110.49 0)
+      (effects
+        (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Package_DIP:DIP-14_W7.62mm" (at 111.76 116.84 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 111.76 116.84 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (pin "5" (uuid 72a3d952-97e7-4e43-a21d-95f78e93f243))
+    (pin "6" (uuid ecb983a2-dca0-46a8-bd52-d99e0d4b6ca3))
+    (pin "7" (uuid 0abeaff9-6c14-45c9-a514-79c6f46e2af2))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "U2") (unit 2)))))
+  (symbol (lib_id "Device:R") (at 91.44 118.11 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid e3eaab7a-fd90-429d-aaa4-d2b18d983b84)
+    (property "Reference" "R4" (at 88.9 116.84 0)
+      (effects
+        (font (size 1.27 1.27)) (justify right)))
+    (property "Value" "100k" (at 88.9 119.38 0)
+      (effects
+        (font (size 1.27 1.27)) (justify right)))
+    (property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" (at 91.44 118.11 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 91.44 118.11 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid b694cfd0-77ce-4877-981a-a44e32375eed))
+    (pin "2" (uuid e80a4e0d-6152-4a29-9fa3-48fab7d4825b))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "R4") (unit 1)))))
+  (symbol (lib_id "power:GND") (at 91.44 121.92 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 35e260c1-f333-44d6-b807-24f3890c4754)
+    (property "Reference" "#PWR17" (at 91.44 121.92 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 91.44 125.73 0)
+      (effects
+        (font (size 1.27 1.27))))
+    (property "Footprint" "" (at 91.44 121.92 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 91.44 121.92 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid b40a3d05-17a8-4533-947d-97678ca32cb9))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR17") (unit 1)))))
+  (symbol (lib_id "Amplifier_Operational:LM324") (at 111.76 137.16 0) (unit 3) (in_bom yes) (on_board yes) (dnp no) (uuid b8c969d4-5f6c-4c82-b689-6b53b6e5dc7d)
+    (property "Reference" "U2" (at 113.03 128.27 0)
+      (effects
+        (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "LM324" (at 113.03 130.81 0)
+      (effects
+        (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Package_DIP:DIP-14_W7.62mm" (at 111.76 137.16 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 111.76 137.16 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (pin "10" (uuid 63526874-c99b-423d-b0cb-97457b7b3452))
+    (pin "8" (uuid 9ec00c58-ec03-4f45-bb11-a51e72f65b5e))
+    (pin "9" (uuid a343710a-49c9-4cbd-b43a-8deed2450991))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "U2") (unit 3)))))
+  (symbol (lib_id "Device:R") (at 91.44 138.43 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 80bb034f-37e0-411b-87b1-df70d5189d21)
+    (property "Reference" "R5" (at 88.9 137.16 0)
+      (effects
+        (font (size 1.27 1.27)) (justify right)))
+    (property "Value" "100k" (at 88.9 139.7 0)
+      (effects
+        (font (size 1.27 1.27)) (justify right)))
+    (property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" (at 91.44 138.43 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 91.44 138.43 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 23828c02-d065-4c84-b04d-2964ff4e02d4))
+    (pin "2" (uuid dd01443b-a3f1-42ba-a275-42f60b8a04d3))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "R5") (unit 1)))))
+  (symbol (lib_id "power:GND") (at 91.44 142.24 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid ff9b75a6-0067-4ee8-84a2-9e8df8c7b11a)
+    (property "Reference" "#PWR18" (at 91.44 142.24 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 91.44 146.05 0)
+      (effects
+        (font (size 1.27 1.27))))
+    (property "Footprint" "" (at 91.44 142.24 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 91.44 142.24 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 8c31cfdf-ef58-430d-8a97-1ce102b36873))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR18") (unit 1)))))
+  (symbol (lib_id "Connector_Generic:Conn_01x03") (at 170.18 96.52 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 764ff9fb-b9a9-4e9e-8a7c-4ef885f78fb7)
+    (property "Reference" "J3" (at 172.72 93.98 0)
+      (effects
+        (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "SERVO 1" (at 172.72 96.52 0)
+      (effects
+        (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" (at 170.18 96.52 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 170.18 96.52 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 064c4d4a-502c-41c4-bd1e-586918c68762))
+    (pin "2" (uuid 10f71535-e18c-443f-ab79-85832f64f992))
+    (pin "3" (uuid 152ee046-56e3-45f3-888b-795f5237251f))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "J3") (unit 1)))))
+  (symbol (lib_id "power:GND") (at 160.02 93.98 270) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid b767cd85-f011-42df-9428-9cb7f40fce34)
+    (property "Reference" "#PWR19" (at 160.02 93.98 90)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 154.94 93.98 90)
+      (effects
+        (font (size 1.27 1.27))))
+    (property "Footprint" "" (at 160.02 93.98 90)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 160.02 93.98 90)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 2cc7b4b5-8411-4ab2-8d86-e41741f78060))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR19") (unit 1)))))
+  (symbol (lib_id "power:+5V") (at 160.02 96.52 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid e172ef17-b716-4b0c-85a4-55aa4e71e100)
+    (property "Reference" "#PWR20" (at 160.02 96.52 90)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Value" "+5V" (at 154.94 96.52 90)
+      (effects
+        (font (size 1.27 1.27))))
+    (property "Footprint" "" (at 160.02 96.52 90)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 160.02 96.52 90)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 7e118509-dd9c-4ca3-8472-5c408f7e6650))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR20") (unit 1)))))
+  (symbol (lib_id "Connector_Generic:Conn_01x03") (at 170.18 116.84 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid ced35401-7531-4e8e-ab5b-dde35bee1a4c)
+    (property "Reference" "J4" (at 172.72 114.3 0)
+      (effects
+        (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "SERVO 2" (at 172.72 116.84 0)
+      (effects
+        (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" (at 170.18 116.84 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 170.18 116.84 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid b4b43681-7f2c-4942-97bb-d226bce310d8))
+    (pin "2" (uuid f15afa0d-7e33-48eb-b964-9b4590c08d23))
+    (pin "3" (uuid 432c260e-fae1-4e67-b2bc-963f41286553))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "J4") (unit 1)))))
+  (symbol (lib_id "power:GND") (at 160.02 114.3 270) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 02ff0dbd-fdec-43fe-8211-f95b72dcaccf)
+    (property "Reference" "#PWR21" (at 160.02 114.3 90)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 154.94 114.3 90)
+      (effects
+        (font (size 1.27 1.27))))
+    (property "Footprint" "" (at 160.02 114.3 90)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 160.02 114.3 90)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 84ed52cb-375a-4bd3-81a1-75fb9caa44d2))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR21") (unit 1)))))
+  (symbol (lib_id "power:+5V") (at 160.02 116.84 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid c172d28a-2b00-4813-a853-eb8369744b75)
+    (property "Reference" "#PWR22" (at 160.02 116.84 90)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Value" "+5V" (at 154.94 116.84 90)
+      (effects
+        (font (size 1.27 1.27))))
+    (property "Footprint" "" (at 160.02 116.84 90)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 160.02 116.84 90)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 12356751-8372-4536-805f-000432f740bb))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR22") (unit 1)))))
+  (symbol (lib_id "Connector_Generic:Conn_01x03") (at 170.18 137.16 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 787fd68d-63b1-40ca-981d-8ffa728f02c7)
+    (property "Reference" "J5" (at 172.72 134.62 0)
+      (effects
+        (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "SERVO 3" (at 172.72 137.16 0)
+      (effects
+        (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" (at 170.18 137.16 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 170.18 137.16 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 2773700b-a591-4aa8-b852-c712041658f9))
+    (pin "2" (uuid dfd0d723-aecc-42f4-909d-8de7c70c3c9d))
+    (pin "3" (uuid f4d052b8-5604-45b5-8986-146c00472b82))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "J5") (unit 1)))))
+  (symbol (lib_id "power:GND") (at 160.02 134.62 270) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid b0cf4a83-d50a-4d5f-b575-7a15d060ae5b)
+    (property "Reference" "#PWR23" (at 160.02 134.62 90)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 154.94 134.62 90)
+      (effects
+        (font (size 1.27 1.27))))
+    (property "Footprint" "" (at 160.02 134.62 90)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 160.02 134.62 90)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid b9fa1f31-5671-45e5-894e-57c5364fbb87))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR23") (unit 1)))))
+  (symbol (lib_id "power:+5V") (at 160.02 137.16 90) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid ded8fa80-5634-4a77-a1c6-36147ee3fc9f)
+    (property "Reference" "#PWR24" (at 160.02 137.16 90)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Value" "+5V" (at 154.94 137.16 90)
+      (effects
+        (font (size 1.27 1.27))))
+    (property "Footprint" "" (at 160.02 137.16 90)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 160.02 137.16 90)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 0c6b8dde-9589-40a6-8ce9-34851bc86570))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR24") (unit 1)))))
+  (symbol (lib_id "Amplifier_Operational:LM324") (at 111.76 157.48 0) (unit 4) (in_bom yes) (on_board yes) (dnp no) (uuid 5d538af8-93d2-479a-9279-548f199a725f)
+    (property "Reference" "U2" (at 113.03 148.59 0)
+      (effects
+        (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "LM324" (at 113.03 151.13 0)
+      (effects
+        (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Package_DIP:DIP-14_W7.62mm" (at 111.76 157.48 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 111.76 157.48 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (pin "12" (uuid 4655997d-fd0a-4e29-ba3c-20c6c4af3b35))
+    (pin "13" (uuid 9fdfd3e6-db4a-4fa5-ab61-6da1889f8460))
+    (pin "14" (uuid dd40dbda-06c8-4a62-a989-1b8ee59c2d0c))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "U2") (unit 4)))))
+  (symbol (lib_id "power:GND") (at 99.06 154.94 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid a3e9a12f-fa8e-4189-9ce3-d6014273cce4)
+    (property "Reference" "#PWR25" (at 99.06 154.94 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 99.06 158.75 0)
+      (effects
+        (font (size 1.27 1.27))))
+    (property "Footprint" "" (at 99.06 154.94 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 99.06 154.94 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid a92c7fb0-53dd-48fe-892a-b079009a52e8))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR25") (unit 1)))))
+  (symbol (lib_id "Amplifier_Operational:LM324") (at 139.7 157.48 0) (unit 5) (in_bom yes) (on_board yes) (dnp no) (uuid 71112dda-77bf-4e02-abb6-b0a291620018)
+    (property "Reference" "U2" (at 140.97 156.21 0)
+      (effects
+        (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "LM324" (at 140.97 158.75 0)
+      (effects
+        (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Package_DIP:DIP-14_W7.62mm" (at 139.7 157.48 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 139.7 157.48 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (pin "11" (uuid 7cad1f7f-5da6-43c9-8706-fda82fc49be6))
+    (pin "4" (uuid 0a15ab53-a82c-49f0-baaf-5ab8f3592184))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "U2") (unit 5)))))
+  (symbol (lib_id "power:+5V") (at 137.16 149.86 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 254cc058-64d2-4e99-9343-efd8fa935112)
+    (property "Reference" "#PWR26" (at 137.16 149.86 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Value" "+5V" (at 137.16 146.05 0)
+      (effects
+        (font (size 1.27 1.27))))
+    (property "Footprint" "" (at 137.16 149.86 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 137.16 149.86 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid ef2cac1e-a617-43f1-9055-4ee792607980))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR26") (unit 1)))))
+  (symbol (lib_id "power:GND") (at 137.16 165.1 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid ecb5abf0-6074-4518-912d-5c10d207d9eb)
+    (property "Reference" "#PWR27" (at 137.16 165.1 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 137.16 168.91 0)
+      (effects
+        (font (size 1.27 1.27))))
+    (property "Footprint" "" (at 137.16 165.1 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 137.16 165.1 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 74d23953-7e92-46a1-aa1a-ae06a6f74fd6))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR27") (unit 1)))))
+  (symbol (lib_id "Device:C") (at 152.4 157.48 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid f0cba806-a5cc-4856-8f6b-1f7b4b4fd9f7)
+    (property "Reference" "C3" (at 154.94 156.21 0)
+      (effects
+        (font (size 1.27 1.27)) (justify left)))
+    (property "Value" "100nF" (at 154.94 158.75 0)
+      (effects
+        (font (size 1.27 1.27)) (justify left)))
+    (property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" (at 152.4 157.48 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 152.4 157.48 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 93582bea-69f3-446f-80a8-eab7f21cf04e))
+    (pin "2" (uuid 36421917-1a42-4d11-ba90-d9851dc2e15a))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "C3") (unit 1)))))
+  (symbol (lib_id "power:+5V") (at 152.4 153.67 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 19559bc9-ae05-4ec9-8301-c1e2b74a1d94)
+    (property "Reference" "#PWR28" (at 152.4 153.67 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Value" "+5V" (at 152.4 149.86 0)
+      (effects
+        (font (size 1.27 1.27))))
+    (property "Footprint" "" (at 152.4 153.67 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 152.4 153.67 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid efb64cde-4004-4362-a61b-692496e660ce))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR28") (unit 1)))))
+  (symbol (lib_id "power:GND") (at 152.4 161.29 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid b52c396c-53b9-435f-8161-654675555602)
+    (property "Reference" "#PWR29" (at 152.4 161.29 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 152.4 165.1 0)
+      (effects
+        (font (size 1.27 1.27))))
+    (property "Footprint" "" (at 152.4 161.29 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "~" (at 152.4 161.29 0)
+      (effects
+        (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid 2db8ba5a-1f40-4c6a-b2c7-93f748688c19))
+    (instances
+      (project "Servo_Driver_A_LDO"
+        (path "/1aff416e-ae8b-4ee8-b4c2-09e067502dcc" (reference "#PWR29") (unit 1)))))
+  (sheet_instances
+    (path "/" (page "1"))))
