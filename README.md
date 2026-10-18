@@ -30,9 +30,56 @@ Il file `.kicad_dru` contiene una sola regola: accetta un solo raggio di collega
 1. In KiCad 9 lanciare il controllo regole elettriche (ERC) sullo schema e il controllo regole di progettazione (DRC) sul PCB, con la verifica di coerenza tra schema e PCB attiva.
 2. Controllare le impronte di L1 e dei condensatori elettrolitici sui componenti acquistati (diametro e passo dei piedini).
 3. Nella variante A lasciare spazio al dissipatore dietro la linguetta di U1, verso il bordo superiore.
-4. Generare i Gerber con **File → Fabbricazione → Gerber** e i file di foratura con **Genera file di foratura**.
+4. Se il PCB è stato modificato, rigenerare i Gerber (vedi sotto).
 
 Per modificare il PCB a mano conviene ricaricare le zone di massa con il tasto **B** dopo ogni modifica.
+
+## File per ordinare le schede
+
+Nella cartella `produzione/` ci sono:
+
+| File | Contenuto |
+|---|---|
+| `Gerber_Servo_Driver_A_LDO.zip` | Gerber e forature della variante A, da caricare così com'è sul sito del produttore |
+| `Gerber_Servo_Driver_B_Buck.zip` | Gerber e forature della variante B |
+| `Progetto_KiCad_Driver_3_Servo.zip` | progetto KiCad completo delle due varianti (schemi, PCB, regole, PDF, Gerber, README) |
+
+Ogni zip Gerber contiene:
+- rame lato componenti e lato saldature (`.gtl`, `.gbl`);
+- maschera di saldatura (`.gts`, `.gbs`);
+- serigrafia (`.gto`, `.gbo`);
+- contorno della scheda (`.gm1`);
+- forature metallizzate e non metallizzate (`-PTH.drl`, `-NPTH.drl`, Excellon in mm);
+- il file di job (`.gbrjob`).
+
+**Dati da inserire nell'ordine** (JLCPCB, PCBWay e simili):
+
+| Parametro | Valore |
+|---|---|
+| Strati | 2 |
+| Dimensioni | 80 × 60 mm |
+| Spessore | 1.6 mm |
+| Rame | 1 oz |
+| Pista minima / distanza minima | 0.4 mm / 0.3 mm |
+| Foro minimo | 0.4 mm (via) |
+| Finitura | HASL |
+| Colore | a piacere |
+
+Questi valori rientrano nelle opzioni standard di tutti i produttori economici.
+
+**Per rigenerare i Gerber dopo una modifica**, in KiCad 9 dall'editor PCB:
+1. Usare **File → Fabbricazione → Gerber**. Strati da includere: F.Cu, B.Cu, F.Silkscreen, B.Silkscreen, F.Mask, B.Mask, Edge.Cuts.
+2. Nella stessa finestra usare **Genera file di foratura**: Excellon, millimetri, PTH e NPTH separati.
+3. Comprimere i file in uno zip.
+
+Da riga di comando:
+
+```sh
+kicad-cli pcb export gerbers -o gerber/ --layers F.Cu,B.Cu,F.SilkS,B.SilkS,F.Mask,B.Mask,Edge.Cuts \
+    --exclude-value --subtract-soldermask Servo_Driver_A_LDO.kicad_pcb
+kicad-cli pcb export drill -o gerber/ --format excellon --excellon-units mm --excellon-separate-th \
+    Servo_Driver_A_LDO.kicad_pcb
+```
 
 ## Parte comune alle due varianti
 
